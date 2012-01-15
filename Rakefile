@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bgg_api"
   gem.homepage = "http://github.com/bhardin/bgg_api"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "boardgamegeek api gem"
+  gem.description = "A gem to interact with the BGG API"
   gem.email = "hardin.brett@gmail.com"
   gem.authors = ["Brett Hardin"]
   # dependencies defined in Gemfile
