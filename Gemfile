@@ -3,6 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 gem 'httparty'
+gem 'xml-simple'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

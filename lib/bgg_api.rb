@@ -1,7 +1,13 @@
 require 'httparty'
-require 'rexml/document'
+require 'xmlsimple'
 
 # http://boardgamegeek.com/wiki/page/BGG_XML_API2#
+
+# because this uses method_missing, the fact that we're including the HTTParty
+# module below into the namespace doesn't seem to help. Likewise with the
+# base_uri method. There's probably some trick to getting this to work, but
+# I haven't yet figured it out and will put it on the list, but later in the
+# process.
 
 class BggApi
   include HTTParty
@@ -15,14 +21,13 @@ class BggApi
       
       if response.code == 200
         xml_data = response.body
-        puts xml_data
+        XmlSimple.xml_in(xml_data)
       else
         raise response.code
       end
     end
     
     def method_missing(method, *args)
-      puts "Method name: #{method}"
       call(method, *args)
     end
   
@@ -32,5 +37,5 @@ class BggApi
 
 end
 
-bgg = BggApi.new
-bgg.search({:query => "Burgund", :type => 'boardgame'})
+#bgg = BggApi.new
+#puts bgg.search({:query => "Burgund", :type => 'boardgame'})
