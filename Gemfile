@@ -12,5 +12,5 @@ group :development do
   gem "shoulda", ">= 0"
   gem "bundler"
   gem "jeweler", "~> 1.6.4"
-  gem "rcov", ">= 0"
+  gem "simplecov", ">= 0"
 end
