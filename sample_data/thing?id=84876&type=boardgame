@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?><items termsofuse="http://boardgamegeek.com/xmlapi/termsofuse"><item type="boardgame" id="84876">
+         <thumbnail>http://cf.geekdo-images.com/images/pic1176894_t.jpg</thumbnail>
+      <image>http://cf.geekdo-images.com/images/pic1176894.jpg</image>
+                                     				
+				<name type="primary" sortindex="5" value="The Castles of Burgundy" />
+			
+						                               				
+				<name type="alternate" sortindex="5" value="Die Burgen von Burgund" />
+			    				
+				<name type="alternate" sortindex="5" value="Les Châteaux de Bourgogne" />
+			
+						               													<description>The game is set in the Burgundy region of High Medieval France. Each player takes on the role of an aristocrat, originally controlling a small princedom. While playing they aim to build settlements and powerful castles, practice trade along the river, exploit silver mines, and use the knowledge of travellers.&amp;#10;&amp;#10;The game is about placing settlement tiles into the princedom. Every tile has a function that starts when the tile is placed. The princedom itself consists of several regions, each of which demands its own settlement tile.&amp;#10;&amp;#10;The core game mechanism involves two dice. The pips show the kind of action the players are allowed to do (example: roll a 2 and a 5: using the 2 the player buys a watch tower and places it on a 5 city tile which triggers the function of the tower with additional advantages).&amp;#10;&amp;#10;It is also possible to influence the dice, so the player is not completely subject to luck.&amp;#10;&amp;#10;The rules include basic and advanced versions.&amp;#10;&amp;#10;This game is #14 in the Alea big box series.&amp;#10;&amp;#10;</description>
+										      	               				<yearpublished value="2011" />
+						               				<minplayers value="2" />
+						               				<maxplayers value="4" />
+						      			<poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="112">
+			
+		<results numplayers="1">		
+					<result value="Best" numvotes="0" />
+					<result value="Recommended" numvotes="3" />
+					<result value="Not Recommended" numvotes="41" />
+				</results>					
+			
+		<results numplayers="2">		
+					<result value="Best" numvotes="72" />
+					<result value="Recommended" numvotes="27" />
+					<result value="Not Recommended" numvotes="2" />
+				</results>					
+			
+		<results numplayers="3">		
+					<result value="Best" numvotes="44" />
+					<result value="Recommended" numvotes="41" />
+					<result value="Not Recommended" numvotes="1" />
+				</results>					
+			
+		<results numplayers="4">		
+					<result value="Best" numvotes="16" />
+					<result value="Recommended" numvotes="44" />
+					<result value="Not Recommended" numvotes="31" />
+				</results>					
+			
+		<results numplayers="4+">		
+					<result value="Best" numvotes="0" />
+					<result value="Recommended" numvotes="1" />
+					<result value="Not Recommended" numvotes="35" />
+				</results>					
+	</poll> 
+			               				<playingtime value="90" />
+						               				<minage value="12" />
+						      			<poll name="suggested_playerage" title="User Suggested Player Age" totalvotes="23">
+			<results>		
+					<result value="2" numvotes="0" />
+					<result value="3" numvotes="0" />
+					<result value="4" numvotes="0" />
+					<result value="5" numvotes="0" />
+					<result value="6" numvotes="1" />
+					<result value="8" numvotes="0" />
+					<result value="10" numvotes="7" />
+					<result value="12" numvotes="13" />
+					<result value="14" numvotes="2" />
+					<result value="16" numvotes="0" />
+					<result value="18" numvotes="0" />
+					<result value="21 and up" numvotes="0" />
+				</results>					
+	</poll> 
+			      			<poll name="language_dependence" title="Language Dependence" totalvotes="35">
+			
+		<results>		
+					<result level="1" value="No necessary in-game text" numvotes="32" />
+					<result level="2" value="Some necessary text - easily memorized or small crib sheet" numvotes="3" />
+					<result level="3" value="Moderate in-game text - needs crib sheet or paste ups" numvotes="0" />
+					<result level="4" value="Extensive use of text - massive conversion needed to be playable" numvotes="0" />
+					<result level="5" value="Unplayable in another language" numvotes="0" />
+				</results>					
+	</poll> 
+			      			 
+			      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamecategory" id="1017" value="Dice" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamecategory" id="1035" value="Medieval" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamecategory" id="1086" value="Territory Building" />
+				
+					
+		
+				
+
+	
+
+			      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamemechanic" id="2072" value="Dice Rolling" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamemechanic" id="2004" value="Set Collection" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamemechanic" id="2002" value="Tile Placement" />
+				
+					
+		
+				
+
+	
+
+			      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamefamily" id="58" value="Alea Big Box" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamefamily" id="11006" value="Country: France" />
+				
+					
+		
+				
+
+	
+
+			      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgameexpansion" id="110926" value="The Castles of Burgundy: New Player Boards" />
+				
+					
+		
+				
+
+	
+
+			      			
+	
+
+			      	      	      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamedesigner" id="4958" value="Stefan Feld" />
+				
+					
+		
+				
+
+	
+
+			      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgameartist" id="11886" value="Julien Delval" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgameartist" id="4959" value="Harald Lieske" />
+				
+					
+		
+				
+
+	
+
+			      	      				
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamepublisher" id="9" value="alea" />
+				
+					
+		
+				
+	
+	
+		 			
+
+	
+		
+				
+		
+					<link type="boardgamepublisher" id="34" value="Ravensburger" />
+				
+					
+		
+				
+
+	
+
+			
+	
+
+	
+
+	
+	
+	
+   
+	
+          
+</item></items>
