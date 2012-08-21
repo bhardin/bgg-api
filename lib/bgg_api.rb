@@ -17,7 +17,7 @@ class BggApi
   protected
   
     def call(method, params = {})
-      response = HTTParty.get(@@base_uri + '/' + method.to_s + '/', :query => params)
+      response = HTTParty.get(@@base_uri + '/' + method.to_s, :query => params)
       
       if response.code == 200
         xml_data = response.body
