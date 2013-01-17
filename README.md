@@ -18,5 +18,5 @@ Contributing to bgg_api
 Copyright
 ---------
 
-Copyright (c) 2012 Brett Hardin. See LICENSE.txt for further details.
+Copyright (c) 2012 [Brett Hardin](http://bretthard.in). See LICENSE.txt for further details.
 
