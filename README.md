@@ -1,8 +1,19 @@
-[![Dependency Status](https://app.sourceninja.com/status/cf268d5e-0d37-4261-94cf-282785d82146.png)](https://app.sourceninja.com/products/cf268d5e-0d37-4261-94cf-282785d82146)
-
 bgg-api gem
 ===========
-A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the bgg XML API.
+A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the [bgg XML Version 2 API](http://boardgamegeek.com/wiki/page/BGG_XML_API2).
+
+## Installing the Gem
+Do the following to install the  [bgg-api gem](http://rubygems.org/gems/bgg-api) Ruby Gem. 
+
+Add the following to your `Gemfile`:
+
+```ruby
+gem "bgg-api"
+```
+
+Then run `bundle install` from the command line:
+
+    bundle install
 
 Contributing to bgg-api
 ----------------------- 
