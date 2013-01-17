@@ -1,0 +1,43 @@
+== bgg_api
+=== A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the bgg_api.
+
+== Install
+(to do)
+
+== Use
+You can either use the low level basic api and then parse the XML document in a way that suits your needs, or you can use the specialized api
+
+=== Basic usage
+
+You *must* instantiate BggApi in order to use it. A typical example could be:
+
+    bgg = BggApi.new
+    results = bgg.search({:query => 'Burgund', :type => 'boardgame'})
+
+=== Specialized usage
+
+Specialized usage is provided as class methods. At this time, only two such methods exist:
+
+* Search boardgame by id
+    Example:
+    BggApi.search_boardgame_by_id(53424)
+  Returns ONE simple hash, containing most of the game information (see code for details). Returns nil in case nothing is found
+
+
+
+=== Contributing to bgg_api
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+
+== Copyright
+
+Copyright (c) 2012 Brett Hardin. See LICENSE.txt for further details.
+
+
