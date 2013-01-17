@@ -1,5 +1,5 @@
 require 'rspec'
-require 'bgg_api'
+require 'bgg-api'
 require 'webmock/rspec'
 
 describe 'BGG Search' do

@@ -1,10 +1,10 @@
 [![Dependency Status](https://app.sourceninja.com/status/cf268d5e-0d37-4261-94cf-282785d82146.png)](https://app.sourceninja.com/products/cf268d5e-0d37-4261-94cf-282785d82146)
 
-bgg_api
-=======
-A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the bgg_api.
+bgg-api gem
+===========
+A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the bgg XML API.
 
-Contributing to bgg_api
+Contributing to bgg-api
 ----------------------- 
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
