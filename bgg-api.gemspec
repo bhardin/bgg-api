@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{bgg-api}
+  s.name = "bgg-api"
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{Brett Hardin}]
-  s.date = %q{2013-01-17}
-  s.description = %q{A gem to interact with the BGG API}
-  s.email = %q{hardin.brett@gmail.com}
+  s.authors = ["Brett Hardin"]
+  s.date = "2013-01-17"
+  s.description = "A gem to interact with the BGG API"
+  s.email = "hardin.brett@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -25,21 +25,22 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/bgg_api.rb",
+    "bgg-api.gemspec",
+    "lib/bgg-api.rb",
     "sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion",
     "sample_data/hot?type=boardgame",
     "sample_data/plays?username=texasjdl&id=84876",
     "sample_data/search?query=Burgund&type=boardgame",
     "sample_data/thing?id=84876&type=boardgame",
     "sample_data/user?name=texasjdl",
-    "spec/bgg_api_spec.rb",
+    "spec/bgg-api-spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/bhardin/bgg-api}
-  s.licenses = [%q{MIT}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.6}
-  s.summary = %q{boardgamegeek api gem}
+  s.homepage = "http://github.com/bhardin/bgg-api"
+  s.licenses = ["MIT"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = "1.8.24"
+  s.summary = "boardgamegeek api gem"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
