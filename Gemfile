@@ -8,4 +8,8 @@ group :development do
   gem "bundler", ">= 1.0.0"
   gem 'rspec'
   gem 'webmock'
+  gem 'jeweler'
+  gem 'rake'
+  gem 'rcov'
+  gem 'rdoc'
 end
