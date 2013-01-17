@@ -23,7 +23,7 @@ Require the gem at the top of any file you want to use.
     
 Create an object and all the xml2 api's documented [here](http://boardgamegeek.com/wiki/page/BGG_XML_API2) should work.
 
-## Search Examples
+## Search Example
 
     bgg = BggApi.new
     bgg.search( {:query => "Burgund", :type => 'boardgame'} )
