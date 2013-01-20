@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "bgg_api"
-  gem.homepage = "http://github.com/bhardin/bgg_api"
+  gem.name = "bgg-api"
+  gem.homepage = "http://github.com/bhardin/bgg-api"
   gem.license = "MIT"
   gem.summary = "boardgamegeek api gem"
   gem.description = "A gem to interact with the BGG API"
@@ -42,12 +42,12 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "bgg_api #{version}"
+  rdoc.title = "bgg-api #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
