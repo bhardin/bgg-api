@@ -77,5 +77,5 @@ Contributing to bgg-api
 Copyright
 ---------
 
-Copyright (c) 2012 [Brett Hardin](http://bretthard.in) and Marcello Missiroli[https://github.com/piffy]. See LICENSE.txt for further details.
+Copyright (c) 2012 [Brett Hardin](http://bretthard.in), [Jeremiah Lee](https://github.com/jemiahlee), and [Marcello Missiroli](https://github.com/piffy). See LICENSE.txt for further details.
 
