@@ -9,7 +9,11 @@ group :development do
   gem 'rspec'
   gem 'webmock'
   gem 'jeweler'
-  gem 'rake'
   gem 'rcov'
   gem 'rdoc'
 end
+
+group :test, :development do
+	gem 'rake'
+end
+
