@@ -1,5 +1,7 @@
 bgg-api gem
 ===========
+[![Build Status](https://travis-ci.org/bhardin/bgg-api.png?branch=master)](https://travis-ci.org/bhardin/bgg-api)
+
 A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the [bgg XML Version 2 API](http://boardgamegeek.com/wiki/page/BGG_XML_API2).
 
 ## Installing the Gem
