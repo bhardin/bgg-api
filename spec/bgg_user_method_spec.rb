@@ -1,6 +1,4 @@
-require 'rspec'
-require 'bgg-api'
-require 'webmock/rspec'
+require 'spec_helper'
 
 describe 'Specialized search by name' do
 
@@ -27,7 +25,6 @@ describe 'Specialized search by name' do
 end
 
 describe 'Specialized search by id' do
-
   it 'should return a game hash matching the id' do
     stub_request(:get, "http://www.boardgamegeek.com/xmlapi/boardgame/53424").to_return(:body => File.new('sample_data/35424.xml'), :status => 200)
     result = BggApi.search_boardgame_by_id(53424)

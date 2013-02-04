@@ -1,9 +1,6 @@
-require 'rspec'
-require 'bgg-api'
-require 'webmock/rspec'
+require 'spec_helper'
 
 describe 'BGG Search' do
-
   it 'some results come back' do
     stub_request(:any, "http://www.boardgamegeek.com/xmlapi2/search").with(:query => {:query => 'Burgund', :type => 'boardgame'}).to_return(:body => File.new('sample_data/search?query=Burgund&type=boardgame'), :status => 200)
 
