@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "sample_data/search?query=Burgund&type=boardgame",
     "sample_data/thing?id=84876&type=boardgame",
     "sample_data/user?name=texasjdl",
-    "spec/bgg-api-spec.rb",
+    "spec/bgg_api_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/bhardin/bgg-api"
