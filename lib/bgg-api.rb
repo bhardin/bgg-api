@@ -75,10 +75,48 @@ class BggApi
 
   end
 
+  def self.entire_user_plays(username, page=1)
+
+    response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+    return if response.code != 200
+
+    plays = Array.new
+    xml = XmlSimple.xml_in(response.body)
+    return if xml["total"]=="0"
+
+    page = 1
+
+    if xml["total"].to_i >= 100
+      pages = (xml["total"].to_i / 100) + 1
+    else
+      pages = 1
+    end
+
+    while page <= pages
+      response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+      xml = XmlSimple.xml_in(response.body)
+      page += 1
+      xml["play"].each do |play|
+        players = Array.new
+        unless play["players"] == nil
+          play["players"][0]["player"].each do |player|
+            players << Hash[:name, player["name"], :win, player["win"].to_i, :score, player["score"]]
+          end
+        end
+        if players.empty?
+          plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :comments, play["comments"]]
+        else
+          plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :players, players, :comments, play["comments"]]
+        end
+      end
+    end
+    return plays
+  end
+
   METHODS.each do |method|
     define_method(method) do |params|
       params ||= {}
-
+      
       url = BASE_URI + '/' + method.to_s
       response = self.class.get(url, :query => params)
 
