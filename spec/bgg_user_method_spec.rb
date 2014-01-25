@@ -55,3 +55,16 @@ describe 'Specialized search by id' do
   end
 
 end
+
+describe 'Specialized play fetching' do
+  it 'should return a users play history' do
+    stub_request(:get, "http://www.boardgamegeek.com/xmlapi2/plays?page=1&username=ryanmacg").to_return(:body => File.new('sample_data/plays?username=ryanmacg'), :status => 200)
+    results = BggApi.entire_user_plays('ryanmacg')
+    results.count != 0
+  end
+  it 'should not return results for pages that have no plays' do
+    stub_request(:get, "http://www.boardgamegeek.com/xmlapi2/plays?page=9999999999999&username=ryanmacg").to_return(:body => File.new('sample_data/plays?pages=9999999999999&username=ryanmacg'), :status => 500)
+    results = BggApi.entire_user_plays('ryanmacg', 9999999999999)
+    results.should be_nil
+  end
+end
