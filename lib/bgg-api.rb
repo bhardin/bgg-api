@@ -75,8 +75,8 @@ class BggApi
       xml = XmlSimple.xml_in(response.body)
       page += 1
       xml["play"].each do |play|
+        @players = []
         unless play["players"] == nil
-          @players = []
           build_players(play)
         end
         build_plays(play, @players)
@@ -92,7 +92,7 @@ class BggApi
   end
 
   def self.build_plays(play, players)
-    if @players.empty?
+    if players.empty?
       @plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :comments, play["comments"]]
     else
       @plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :players, players, :comments, play["comments"]]
