@@ -42,7 +42,7 @@ class BggApi
         @primary_name=name["content"]
         primary_index = index
       else
-        @alternate_names <<name["content"]
+        @alternate_names << name["content"]
       end
       xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
     end
