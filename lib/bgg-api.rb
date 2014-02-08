@@ -89,7 +89,6 @@ class BggApi
     play["players"][0]["player"].each do |player|
       @players << Hash[:name, player["name"], :win, player["win"].to_i, :score, player["score"]]
     end
-    return @players
   end
 
   def self.build_plays(play, players)
@@ -98,7 +97,6 @@ class BggApi
     else
       @plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :players, players, :comments, play["comments"]]
     end
-    return @plays
   end
 
 
