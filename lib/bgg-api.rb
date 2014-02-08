@@ -58,7 +58,7 @@ class BggApi
     response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
     return if response.code != 200
 
-    plays = Array.new
+    @plays = []
     xml = XmlSimple.xml_in(response.body)
     return if xml["total"]=="0"
 
@@ -75,20 +75,30 @@ class BggApi
       xml = XmlSimple.xml_in(response.body)
       page += 1
       xml["play"].each do |play|
-        players = Array.new
         unless play["players"] == nil
-          play["players"][0]["player"].each do |player|
-            players << Hash[:name, player["name"], :win, player["win"].to_i, :score, player["score"]]
-          end
+          @players = []
+          build_players(play)
         end
-        if players.empty?
-          plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :comments, play["comments"]]
-        else
-          plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :players, players, :comments, play["comments"]]
-        end
+        build_plays(play, @players)
       end
     end
-    return plays
+    return @plays
+  end
+
+  def self.build_players(play)
+    play["players"][0]["player"].each do |player|
+      @players << Hash[:name, player["name"], :win, player["win"].to_i, :score, player["score"]]
+    end
+    return @players
+  end
+
+  def self.build_plays(play, players)
+    if @players.empty?
+      @plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :comments, play["comments"]]
+    else
+      @plays << Hash[:date, play["date"], :nowinstats, play["nowinstats"].to_i, :boardgame, play["item"][0]["name"], :objectid, play["item"][0]["objectid"].to_i, :players, players, :comments, play["comments"]]
+    end
+    return @plays
   end
 
 
