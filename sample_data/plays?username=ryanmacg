@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?><plays username="ryanmacg" userid="621029" total="60" page="1" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+<play id="10871503" date="2014-01-05" quantity="1" length="0" incomplete="0" nowinstats="1" location="">
+      <item name="Castle Panic" objecttype="thing" objectid="43443">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Jonty" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Kirstie" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Nick" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Rhoda" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="" new="0" rating="0" win="0" />
+            </players>
+          </play>
+  <play id="10874787" date="2014-01-05" quantity="1" length="0" incomplete="0" nowinstats="1" location="">
+      <item name="Castle Panic: The Wizard&#039;s Tower" objecttype="thing" objectid="104590">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+            <comments>Co-op game</comments>
+                  <players>
+                  <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Kirstie" startposition="" color="" score="" new="0" rating="0" win="1" />
+            <player username="nickschurch" userid="771929" name="Nick" startposition="" color="" score="" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Jonty" startposition="" color="" score="" new="0" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10873314" date="2014-01-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Puerto Rico" objecttype="thing" objectid="3076">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Jonty" startposition="" color="" score="38" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Kirstie" startposition="" color="" score="32" new="0" rating="0" win="0" />
+            <player username="nickschurch" userid="771929" name="Nick" startposition="" color="" score="18" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Rhoda" startposition="" color="" score="36" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="44" new="0" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10850931" date="2014-01-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Small World" objecttype="thing" objectid="40692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Jonty" startposition="" color="" score="106" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Nick" startposition="" color="" score="81" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Rhoda" startposition="" color="" score="91" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="117" new="0" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10795505" date="2013-12-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Castle Panic" objecttype="thing" objectid="43443">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="" new="0" rating="0" win="1" />
+            <player username="" userid="0" name="Kirstie" startposition="" color="" score="" new="0" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10795522" date="2013-12-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="The Witches: A Discworld Game" objecttype="thing" objectid="137095">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="Green" score="20" new="1" rating="0" win="0" />
+            <player username="" userid="0" name="Kirstie" startposition="" color="Blue" score="21" new="1" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10737644" date="2013-12-22" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Qwirkle" objecttype="thing" objectid="25669">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Kirstie" startposition="" color="" score="162" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="200" new="0" rating="0" win="0" />
+            </players>
+          </play>
+  <play id="10231486" date="2013-09-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Agricola" objecttype="thing" objectid="31260">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10231317" date="2013-09-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Citadels" objecttype="thing" objectid="478">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10228012" date="2013-09-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Love Letter" objecttype="thing" objectid="129622">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10226271" date="2013-09-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="The Settlers of Catan" objecttype="thing" objectid="13">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10224532" date="2013-09-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10227715" date="2013-09-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10224534" date="2013-09-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10227716" date="2013-09-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10224264" date="2013-09-27" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Arkham Horror" objecttype="thing" objectid="15987">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10122697" date="2013-09-08" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10122698" date="2013-09-08" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114199" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114200" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114201" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114202" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114206" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114207" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114213" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10114214" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10115147" date="2013-09-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Ticket to Ride: Europe" objecttype="thing" objectid="14996">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Kirstie" startposition="" color="Yellow" score="116" new="0" rating="0" win="1" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="Black" score="111" new="0" rating="0" win="0" />
+            </players>
+          </play>
+  <play id="10110222" date="2013-09-06" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Ticket to Ride: Europe" objecttype="thing" objectid="14996">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Kirstie" startposition="" color="Yellow" score="110" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="Black" score="117" new="0" rating="0" win="1" />
+            </players>
+          </play>
+  <play id="10079279" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Love Letter" objecttype="thing" objectid="129622">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10079291" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Love Letter" objecttype="thing" objectid="129622">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10078800" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="The Resistance" objecttype="thing" objectid="41114">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10078804" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="The Resistance" objecttype="thing" objectid="41114">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10078819" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10080770" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up" objecttype="thing" objectid="122522">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10080774" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="10080775" date="2013-09-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Smash Up: Awesome Level 9000" objecttype="thing" objectid="134726">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="9647565" date="2013-06-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Small World" objecttype="thing" objectid="40692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Kirstie" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Mark" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Tammy" startposition="" color="" score="" new="0" rating="0" win="0" />
+            </players>
+          </play>
+  <play id="9594950" date="2013-06-09" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="A Game of Thrones: The Board Game (Second Edition)" objecttype="thing" objectid="103343">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                  <players>
+                  <player username="" userid="0" name="Kirstie" startposition="" color="Greyjoy" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Nick" startposition="" color="Lannister" score="" new="0" rating="0" win="0" />
+            <player username="" userid="0" name="Rhoda" startposition="" color="Baratheon" score="" new="0" rating="0" win="0" />
+            <player username="RyanMacG" userid="621029" name="Ryan" startposition="" color="Stark" score="" new="0" rating="0" win="0" />
+            </players>
+          </play>
+  <play id="8986384" date="2013-02-24" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Gloom" objecttype="thing" objectid="12692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8995007" date="2013-02-24" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Risk: Halo Wars Collector&#039;s Edition" objecttype="thing" objectid="40638">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8985320" date="2013-02-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Carcassonne" objecttype="thing" objectid="822">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8984291" date="2013-02-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Cards Against Humanity" objecttype="thing" objectid="50381">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8983197" date="2013-02-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Dominion" objecttype="thing" objectid="36218">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+            <comments>w/ Alchemy</comments>
+                </play>
+  <play id="8985053" date="2013-02-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Tsuro" objecttype="thing" objectid="16992">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8941675" date="2013-02-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Dixit" objecttype="thing" objectid="39856">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8941672" date="2013-02-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Dominion" objecttype="thing" objectid="36218">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8941668" date="2013-02-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Tsuro" objecttype="thing" objectid="16992">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8863820" date="2013-02-03" quantity="1" length="30" incomplete="0" nowinstats="0" location="">
+      <item name="Cards Against Humanity" objecttype="thing" objectid="50381">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+            <comments>Really quick game with only 3 of us</comments>
+                </play>
+  <play id="8864271" date="2013-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Dixit" objecttype="thing" objectid="39856">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8860008" date="2013-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Battlestar Galactica" objecttype="thing" objectid="37111">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8860009" date="2013-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Battlestar Galactica: Pegasus Expansion" objecttype="thing" objectid="43539">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameexpansion" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8863817" date="2013-01-30" quantity="1" length="90" incomplete="0" nowinstats="0" location="">
+      <item name="Citadels" objecttype="thing" objectid="478">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8833457" date="2013-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="A Game of Thrones: The Board Game (Second Edition)" objecttype="thing" objectid="103343">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691229" date="2013-01-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Gloom" objecttype="thing" objectid="12692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691246" date="2013-01-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Ticket to Ride: Europe" objecttype="thing" objectid="14996">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691222" date="2013-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="A Game of Thrones: The Board Game (Second Edition)" objecttype="thing" objectid="103343">
+        <subtypes>
+                    <subtype value="boardgame" />
+                    <subtype value="boardgameimplementation" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691225" date="2013-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Gloom" objecttype="thing" objectid="12692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691252" date="2013-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Zombie Dice" objecttype="thing" objectid="62871">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691253" date="2013-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Zombie Dice" objecttype="thing" objectid="62871">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  <play id="8691227" date="2012-12-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+      <item name="Gloom" objecttype="thing" objectid="12692">
+        <subtypes>
+                    <subtype value="boardgame" />
+                  </subtypes>
+      </item>
+                </play>
+  </plays>
