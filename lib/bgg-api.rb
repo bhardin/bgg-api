@@ -62,8 +62,6 @@ class BggApi
     xml = XmlSimple.xml_in(response.body)
     return if xml["total"]=="0"
 
-    page = 1
-
     pages = (xml["total"].to_i / 100) + 1
 
     while page <= pages
