@@ -64,11 +64,7 @@ class BggApi
 
     page = 1
 
-    if xml["total"].to_i >= 100
-      pages = (xml["total"].to_i / 100) + 1
-    else
-      pages = 1
-    end
+    pages = (xml["total"].to_i / 100) + 1
 
     while page <= pages
       response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
