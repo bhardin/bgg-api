@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "bgg-api.gemspec",
     "lib/bgg-api.rb",
+    "lib/hash_builder.rb",
     "sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion",
     "sample_data/hot?type=boardgame",
     "sample_data/plays?username=texasjdl&id=84876",
