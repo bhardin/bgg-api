@@ -25,7 +25,7 @@ end
 
 describe 'BGG Collection' do
   it 'retrieves a collection' do
-    stub_request(:any, "http://www.boardgamegeek.com/xmlapi2/collection").with(:query => {:own => '1', :name => 'texasjdl', :type => 'boardgame'}).to_return(:body => File.new('sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion'), :status => 200)
+    stub_request(:any, "http://www.boardgamegeek.com/xmlapi2/collection").with(:query => {:own => '1', :username => 'texasjdl', :type => 'boardgame'}).to_return(:body => File.new('sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion'), :status => 200)
 
     bgg = BggApi.new
     results = bgg.collection({:name => 'texasjdl', :own => '1', :type => 'boardgame'})
