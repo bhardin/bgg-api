@@ -16,8 +16,6 @@ class BggApi
   @@base_uri = "http://www.boardgamegeek.com/xmlapi2"
   @@old_uri = "http://www.boardgamegeek.com/xmlapi"
 
-  @hash = HashBuilder
-
   def self.search_by_name(name,type='boardgame')
 
     response = HTTParty.get(@@base_uri + '/search', :query=> {:query => name, :type => type})
@@ -29,7 +27,7 @@ class BggApi
     return if xml["total"]=="0"
 
     xml["item"].each do  |item|
-      @hash.build_basic_game_results(item, result)
+      HashBuilder.build_basic_game_results(item, result)
     end
     return result
   end
@@ -49,7 +47,7 @@ class BggApi
       end
       xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
     end
-    result = @hash.build_complex_boardgame_result(@primary_name, @alternate_names, xml, id)
+    result = HashBuilder.build_complex_boardgame_result(@primary_name, @alternate_names, xml, id)
     return result
   end
 
@@ -71,9 +69,9 @@ class BggApi
       xml["play"].each do |play|
         @players = []
         unless play["players"] == nil
-          @hash.build_players(play, @players)
+          HashBuilder.build_players(play, @players)
         end
-        @hash.build_plays(play, @players, @plays)
+        HashBuilder.build_plays(play, @players, @plays)
       end
     end
     return @plays
