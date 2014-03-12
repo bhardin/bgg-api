@@ -1,5 +1,6 @@
 require 'httparty'
 require 'xmlsimple'
+require 'hash_builder'
 
 # http://boardgamegeek.com/wiki/page/BGG_XML_API2#
 
@@ -26,7 +27,7 @@ class BggApi
     return if xml["total"]=="0"
 
     xml["item"].each do  |item|
-      result << Hash[:name, item["name"][0]["value"], :type, item["type"],  :id , item["id"].to_i]
+      HashBuilder.build_basic_game_results(item, result)
     end
     return result
   end
@@ -42,17 +43,39 @@ class BggApi
         @primary_name=name["content"]
         primary_index = index
       else
-        @alternate_names <<name["content"]
+        @alternate_names << name["content"]
       end
       xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
     end
-    return Hash[:id, id, :name, @primary_name,:minplayers,xml["boardgame"][0]["minplayers"][0],:maxplayers,xml["boardgame"][0]["maxplayers"][0],
-                :age,xml["boardgame"][0]["age"][0], :description, xml["boardgame"][0]["description"][0],:playingtime,xml["boardgame"][0]["playingtime"][0],
-                :thumbnail,xml["boardgame"][0]["thumbnail"][0], :image ,xml["boardgame"][0]["image"][0], :alternatenames,  @alternate_names.sort,
-                :yearpublished,xml["boardgame"][0]["yearpublished"][0] ]
-
+    result = HashBuilder.build_complex_boardgame_result(@primary_name, @alternate_names, xml, id)
+    return result
   end
 
+  def self.entire_user_plays(username, page=1)
+
+    response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+    return if response.code != 200
+
+    @plays = []
+    xml = XmlSimple.xml_in(response.body)
+    return if xml["total"]=="0"
+
+    pages = (xml["total"].to_i / 100) + 1
+
+    while page <= pages
+      response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+      xml = XmlSimple.xml_in(response.body)
+      page += 1
+      xml["play"].each do |play|
+        @players = []
+        unless play["players"] == nil
+          HashBuilder.build_players(play, @players)
+        end
+        HashBuilder.build_plays(play, @players, @plays)
+      end
+    end
+    return @plays
+  end
 
     protected
   
