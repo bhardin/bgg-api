@@ -39,14 +39,13 @@ class BggApi
     xml = XmlSimple.xml_in(response.body)
     return if xml["total"]=="0"
 
-    xml["item"].each do  |item|
-      result << {
+    xml["item"].map do |item|
+      {
         :name => item["name"][0]["value"],
         :type => item["type"],
         :id   => item["id"].to_i,
       }
     end
-    return result
   end
 
   def self.search_boardgame_by_id(id,type='boardgame')
