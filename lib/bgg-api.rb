@@ -49,38 +49,34 @@ class BggApi
   end
 
   def self.search_boardgame_by_id(id,type='boardgame')
-    response = HTTParty.get(OLD_URI + '/boardgame/'+id.to_s)
-    return if response.code != 200
+    response = HTTParty.get("#{OLD_URI}/boardgame/#{id}")
+    return unless response.code == 200
 
     xml = XmlSimple.xml_in(response.body)
-    @alternate_names = Array.new
-    xml["boardgame"][0]["name"].each_with_index do |name,index|
-      if name["primary"]=="true"
-        @primary_name=name["content"]
-        primary_index = index
-      else
-        @alternate_names <<name["content"]
-      end
-      xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
-    end
+    game_data  = xml["boardgame"][0]
+    name_nodes = game_data["name"]
 
-    first_game = xml["boardgame"][0]
+    primary_node = name_nodes.find { |name| name['primary'] == 'true' }
+    primary_name = primary_node['content']
+
+    other_game_nodes = name_nodes.reject { |name| name['primary'] == 'true' }
+    other_game_names = other_game_nodes.map { |node| node['content'] }
 
     return {
       :id => id,
-      :name => @primary_name,
-      :minplayers => first_game["minplayers"][0],
-      :maxplayers => first_game["maxplayers"][0],
+      :name =>  primary_name,
+      :minplayers => game_data["minplayers"][0],
+      :maxplayers => game_data["maxplayers"][0],
 
-      :age => first_game["age"][0],
-      :description =>  first_game["description"][0],
-      :playingtime => first_game["playingtime"][0],
+      :age => game_data["age"][0],
+      :description =>  game_data["description"][0],
+      :playingtime => game_data["playingtime"][0],
 
-      :thumbnail => first_game["thumbnail"][0],
-      :image => first_game["image"][0],
-      :alternatenames =>  @alternate_names.sort,
+      :thumbnail => game_data["thumbnail"][0],
+      :image => game_data["image"][0],
+      :alternatenames =>  other_game_names.sort,
 
-      :yearpublished => first_game["yearpublished"][0],
+      :yearpublished => game_data["yearpublished"][0],
     }
 
   end

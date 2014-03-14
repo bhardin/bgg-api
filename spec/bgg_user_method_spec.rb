@@ -44,8 +44,9 @@ describe 'Specialized search by id' do
     result = BggApi.search_boardgame_by_id(325)
     result[:id].should == 325
     result[:name].should == "Catan: Seafarers"
+    result[:alternatenames].size.should == 24
     result[:alternatenames][0].should == "Catan: Navegantes"
-    result[:alternatenames][4].should == "Colonistii din Catan: Navigatorii"
+    result[:alternatenames][4].should == "Catanin uudisasukkaat: Merenkävijät"
   end
 
   it 'should return nil in case of errors' do
