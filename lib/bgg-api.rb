@@ -3,12 +3,6 @@ require 'xmlsimple'
 
 # http://boardgamegeek.com/wiki/page/BGG_XML_API2#
 
-# because this uses method_missing, the fact that we're including the HTTParty
-# module below into the namespace doesn't seem to help. Likewise with the
-# base_uri method. There's probably some trick to getting this to work, but
-# I haven't yet figured it out and will put it on the list, but later in the
-# process.
-
 class BggApi
   include HTTParty
 
@@ -31,7 +25,7 @@ class BggApi
 
   def self.search_by_name(name,type='boardgame')
 
-    response = HTTParty.get(BASE_URI + '/search', :query=> {:query => name, :type => type})
+    response = get(BASE_URI + '/search', :query=> {:query => name, :type => type})
 
     return if response.code != 200
 
@@ -49,7 +43,7 @@ class BggApi
   end
 
   def self.search_boardgame_by_id(id,type='boardgame')
-    response = HTTParty.get("#{OLD_URI}/boardgame/#{id}")
+    response = get("#{OLD_URI}/boardgame/#{id}")
     return unless response.code == 200
 
     xml = XmlSimple.xml_in(response.body)
@@ -86,7 +80,7 @@ class BggApi
       params ||= {}
 
       url = BASE_URI + '/' + method.to_s
-      response = HTTParty.get(url, :query => params)
+      response = self.class.get(url, :query => params)
 
       if response.code == 200
         xml_data = response.body
