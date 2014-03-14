@@ -12,12 +12,26 @@ require 'xmlsimple'
 class BggApi
   include HTTParty
 
-  @@base_uri = "http://www.boardgamegeek.com/xmlapi2"
-  @@old_uri = "http://www.boardgamegeek.com/xmlapi"
+  METHODS = [
+    :thing,
+    :family,
+    :forumlist,
+    :forum,
+    :thread,
+    :user,
+    :guild,
+    :plays,
+    :collection,
+    :hot,
+    :search,
+  ].freeze
+
+  BASE_URI = "http://www.boardgamegeek.com/xmlapi2"
+  OLD_URI  = "http://www.boardgamegeek.com/xmlapi"
 
   def self.search_by_name(name,type='boardgame')
 
-    response = HTTParty.get(@@base_uri + '/search', :query=> {:query => name, :type => type})
+    response = HTTParty.get(BASE_URI + '/search', :query=> {:query => name, :type => type})
 
     return if response.code != 200
 
@@ -32,7 +46,7 @@ class BggApi
   end
 
   def self.search_boardgame_by_id(id,type='boardgame')
-    response = HTTParty.get(@@old_uri + '/boardgame/'+id.to_s)
+    response = HTTParty.get(OLD_URI + '/boardgame/'+id.to_s)
     return if response.code != 200
 
     xml = XmlSimple.xml_in(response.body)
@@ -53,28 +67,21 @@ class BggApi
 
   end
 
+  METHODS.each do |method|
+    define_method(method) do |params|
+      params ||= {}
 
-    protected
-  
-    def call(method, params = {})
-      response = HTTParty.get(@@base_uri + '/' + method.to_s, :query => params)
-      
+      url = BASE_URI + '/' + method.to_s
+      response = HTTParty.get(url, :query => params)
+
       if response.code == 200
         xml_data = response.body
         XmlSimple.xml_in(xml_data)
       else
-        raise response.code
+        raise "Received a #{response.code} at #{url} with #{params}"
       end
     end
-    
-    def method_missing(method, *args)
-      call(method, *args)
-    end
-  
-    def respond_to?(method)
-        true
-    end
-
+  end
 end
 
 #bgg = BggApi.new

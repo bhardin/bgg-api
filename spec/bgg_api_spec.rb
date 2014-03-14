@@ -3,6 +3,14 @@ require 'spec_helper'
 describe BggApi do
   let(:bgg) { BggApi.new }
 
+  describe 'calling undefined methods' do
+    subject { bgg.foo }
+
+    it 'raises an UndefinedMethodError' do
+      expect { subject }.to raise_error(NoMethodError)
+    end
+  end
+
   context 'with stubbed responses' do
 
     let(:expected_response) { File.open(response_file) }
