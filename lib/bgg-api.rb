@@ -40,7 +40,11 @@ class BggApi
     return if xml["total"]=="0"
 
     xml["item"].each do  |item|
-      result << Hash[:name, item["name"][0]["value"], :type, item["type"],  :id , item["id"].to_i]
+      result << {
+        :name => item["name"][0]["value"],
+        :type => item["type"],
+        :id   => item["id"].to_i,
+      }
     end
     return result
   end
@@ -60,10 +64,25 @@ class BggApi
       end
       xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
     end
-    return Hash[:id, id, :name, @primary_name,:minplayers,xml["boardgame"][0]["minplayers"][0],:maxplayers,xml["boardgame"][0]["maxplayers"][0],
-                :age,xml["boardgame"][0]["age"][0], :description, xml["boardgame"][0]["description"][0],:playingtime,xml["boardgame"][0]["playingtime"][0],
-                :thumbnail,xml["boardgame"][0]["thumbnail"][0], :image ,xml["boardgame"][0]["image"][0], :alternatenames,  @alternate_names.sort,
-                :yearpublished,xml["boardgame"][0]["yearpublished"][0] ]
+
+    first_game = xml["boardgame"][0]
+
+    return {
+      :id => id,
+      :name => @primary_name,
+      :minplayers => first_game["minplayers"][0],
+      :maxplayers => first_game["maxplayers"][0],
+
+      :age => first_game["age"][0],
+      :description =>  first_game["description"][0],
+      :playingtime => first_game["playingtime"][0],
+
+      :thumbnail => first_game["thumbnail"][0],
+      :image => first_game["image"][0],
+      :alternatenames =>  @alternate_names.sort,
+
+      :yearpublished => first_game["yearpublished"][0],
+    }
 
   end
 
