@@ -3,21 +3,29 @@ require 'xmlsimple'
 
 # http://boardgamegeek.com/wiki/page/BGG_XML_API2#
 
-# because this uses method_missing, the fact that we're including the HTTParty
-# module below into the namespace doesn't seem to help. Likewise with the
-# base_uri method. There's probably some trick to getting this to work, but
-# I haven't yet figured it out and will put it on the list, but later in the
-# process.
-
 class BggApi
   include HTTParty
 
-  @@base_uri = "http://www.boardgamegeek.com/xmlapi2"
-  @@old_uri = "http://www.boardgamegeek.com/xmlapi"
+  METHODS = [
+    :thing,
+    :family,
+    :forumlist,
+    :forum,
+    :thread,
+    :user,
+    :guild,
+    :plays,
+    :collection,
+    :hot,
+    :search,
+  ].freeze
+
+  BASE_URI = "http://www.boardgamegeek.com/xmlapi2"
+  OLD_URI  = "http://www.boardgamegeek.com/xmlapi"
 
   def self.search_by_name(name,type='boardgame')
 
-    response = HTTParty.get(@@base_uri + '/search', :query=> {:query => name, :type => type})
+    response = get(BASE_URI + '/search', :query=> {:query => name, :type => type})
 
     return if response.code != 200
 
@@ -25,56 +33,63 @@ class BggApi
     xml = XmlSimple.xml_in(response.body)
     return if xml["total"]=="0"
 
-    xml["item"].each do  |item|
-      result << Hash[:name, item["name"][0]["value"], :type, item["type"],  :id , item["id"].to_i]
+    xml["item"].map do |item|
+      {
+        :name => item["name"][0]["value"],
+        :type => item["type"],
+        :id   => item["id"].to_i,
+      }
     end
-    return result
   end
 
   def self.search_boardgame_by_id(id,type='boardgame')
-    response = HTTParty.get(@@old_uri + '/boardgame/'+id.to_s)
-    return if response.code != 200
+    response = get("#{OLD_URI}/boardgame/#{id}")
+    return unless response.code == 200
 
     xml = XmlSimple.xml_in(response.body)
-    @alternate_names = Array.new
-    xml["boardgame"][0]["name"].each_with_index do |name,index|
-      if name["primary"]=="true"
-        @primary_name=name["content"]
-        primary_index = index
-      else
-        @alternate_names <<name["content"]
-      end
-      xml["boardgame"][0]["name"].slice!(primary_index) unless primary_index.nil?
-    end
-    return Hash[:id, id, :name, @primary_name,:minplayers,xml["boardgame"][0]["minplayers"][0],:maxplayers,xml["boardgame"][0]["maxplayers"][0],
-                :age,xml["boardgame"][0]["age"][0], :description, xml["boardgame"][0]["description"][0],:playingtime,xml["boardgame"][0]["playingtime"][0],
-                :thumbnail,xml["boardgame"][0]["thumbnail"][0], :image ,xml["boardgame"][0]["image"][0], :alternatenames,  @alternate_names.sort,
-                :yearpublished,xml["boardgame"][0]["yearpublished"][0] ]
+    game_data  = xml["boardgame"][0]
+    name_nodes = game_data["name"]
+
+    primary_node = name_nodes.find { |name| name['primary'] == 'true' }
+    primary_name = primary_node['content']
+
+    other_game_nodes = name_nodes.reject { |name| name['primary'] == 'true' }
+    other_game_names = other_game_nodes.map { |node| node['content'] }
+
+    return {
+      :id => id,
+      :name =>  primary_name,
+      :minplayers => game_data["minplayers"][0],
+      :maxplayers => game_data["maxplayers"][0],
+
+      :age => game_data["age"][0],
+      :description =>  game_data["description"][0],
+      :playingtime => game_data["playingtime"][0],
+
+      :thumbnail => game_data["thumbnail"][0],
+      :image => game_data["image"][0],
+      :alternatenames =>  other_game_names.sort,
+
+      :yearpublished => game_data["yearpublished"][0],
+    }
 
   end
 
+  METHODS.each do |method|
+    define_method(method) do |params|
+      params ||= {}
 
-    protected
-  
-    def call(method, params = {})
-      response = HTTParty.get(@@base_uri + '/' + method.to_s, :query => params)
-      
+      url = BASE_URI + '/' + method.to_s
+      response = self.class.get(url, :query => params)
+
       if response.code == 200
         xml_data = response.body
         XmlSimple.xml_in(xml_data)
       else
-        raise response.code
+        raise "Received a #{response.code} at #{url} with #{params}"
       end
     end
-    
-    def method_missing(method, *args)
-      call(method, *args)
-    end
-  
-    def respond_to?(method)
-        true
-    end
-
+  end
 end
 
 #bgg = BggApi.new
