@@ -77,7 +77,7 @@ class BggApi
 
   def self.entire_user_plays(username, page=1)
 
-    response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+    response = get(BASE_URI + '/plays', :query => {:username => username, :page => page})
     return if response.code != 200
 
     plays = Array.new
@@ -93,7 +93,7 @@ class BggApi
     end
 
     while page <= pages
-      response = HTTParty.get(@@base_uri + '/plays', :query => {:username => username, :page => page})
+      response = get(BASE_URI + '/plays', :query => {:username => username, :page => page})
       xml = XmlSimple.xml_in(response.body)
       page += 1
       xml["play"].each do |play|
@@ -116,7 +116,7 @@ class BggApi
   METHODS.each do |method|
     define_method(method) do |params|
       params ||= {}
-      
+
       url = BASE_URI + '/' + method.to_s
       response = self.class.get(url, :query => params)
 
