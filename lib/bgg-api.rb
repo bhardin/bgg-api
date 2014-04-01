@@ -7,17 +7,17 @@ class BggApi
   include HTTParty
 
   METHODS = [
-    :thing,
+    :collection,
     :family,
-    :forumlist,
     :forum,
+    :forumlist,
+    :guild,
+    :hot,
+    :plays,
+    :search,
+    :thing,
     :thread,
     :user,
-    :guild,
-    :plays,
-    :collection,
-    :hot,
-    :search,
   ].freeze
 
   BASE_URI = 'http://www.boardgamegeek.com/xmlapi2'
