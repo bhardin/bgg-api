@@ -16,8 +16,8 @@ describe 'BggApi basic API calls' do
 
     before do
       stub_request(:any, request_url)
-        .with(query: query)
-        .to_return(body: expected_response, status: 200)
+      .with(query: query)
+      .to_return(body: expected_response, status: 200)
     end
 
     describe 'BGG Search' do
@@ -83,6 +83,32 @@ describe 'BggApi basic API calls' do
 
       it 'retrieves the correct total' do
         results['total'].should == '27'
+      end
+    end
+
+    describe 'BGG User' do
+      context 'who exists' do
+        let(:query) { {name: 'texasjdl'} }
+        let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
+        let(:response_file) { 'sample_data/user?name=texasjdl' }
+
+        subject(:results) { bgg.user(query) }
+
+        it { should_not be_nil }
+
+        it 'has a yearregistered value' do
+          results['yearregistered'][0]['value'].should == '2004'
+        end
+      end
+
+      context 'who does not exist' do
+        let(:query) { {name: 'yyyyyyy'} }
+        let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
+        let(:response_file) { 'sample_data/user?name=yyyyyyy' }
+
+        subject(:results) { bgg.user(query) }
+
+        it { should raise_error }
       end
     end
   end
