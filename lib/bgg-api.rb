@@ -45,6 +45,8 @@ class BggApi
     return unless response.code == 200
 
     xml = XmlSimple.xml_in(response.body)
+    return if xml['boardgame'][0].has_key?('error')
+
     game_data  = xml['boardgame'][0]
     name_nodes = game_data['name']
 

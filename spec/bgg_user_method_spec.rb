@@ -65,8 +65,8 @@ describe 'Specialized search by id' do
   end
 
   it 'returns nil in case of errors' do
-    stub_request(:get, 'http://www.boardgamegeek.com/xmlapi2/search?query=Burgund&type=boardgame').to_return(body: File.new('sample_data/search?query=XXXXXXXX'), status: 500)
-    results = BggApi.search_by_name('Burgund')
+    stub_request(:get, 'http://www.boardgamegeek.com/xmlapi/boardgame/0').to_return(body: File.new('sample_data/0.xml'), status: 200)
+    results = BggApi.search_boardgame_by_id(0)
     results.should be_nil
   end
 
