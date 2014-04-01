@@ -1,8 +1,12 @@
 bgg-api gem [![Build Status](https://travis-ci.org/bhardin/bgg-api.png?branch=master)](https://travis-ci.org/bhardin/bgg-api) [![Code Climate](https://codeclimate.com/github/bhardin/bgg-api.png)](https://codeclimate.com/github/bhardin/bgg-api)
 ===========
 
-
 A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the [bgg XML Version 2 API](http://boardgamegeek.com/wiki/page/BGG_XML_API2).
+
+## Versions supported
+
+Please note that this code uses Ruby 1.9 hash syntax and thus does not
+support versions earlier than that.
 
 ## Installing the Gem
 Do the following to install the  [bgg-api gem](http://rubygems.org/gems/bgg-api) Ruby Gem.

@@ -8,23 +8,23 @@ require 'rake/testtask'
 require 'rdoc/task'
 require 'rspec/core/rake_task'
 
-task :default => :spec
+task default: :spec
 
 Jeweler::Tasks.new do |gem|
-  gem.name = "bgg-api"
-  gem.homepage = "http://github.com/bhardin/bgg-api"
-  gem.license = "MIT"
-  gem.summary = "boardgamegeek api gem"
-  gem.description = "A gem to interact with the BGG API"
-  gem.email = "hardin.brett@gmail.com"
-  gem.authors = ["Brett Hardin"]
+  gem.name = 'bgg-api'
+  gem.homepage = 'http://github.com/bhardin/bgg-api'
+  gem.license = 'MIT'
+  gem.summary = 'boardgamegeek api gem'
+  gem.description = 'A gem to interact with the BGG API'
+  gem.email = 'hardin.brett@gmail.com'
+  gem.authors = ['Brett Hardin']
 end
 Jeweler::RubygemsDotOrgTasks.new
 
 RSpec::Core::RakeTask.new(:spec)
 
 task :coverage do
-  ENV["COVERAGE"] = 'yes'
+  ENV['COVERAGE'] = 'yes'
   Rake::Task['spec'].execute
 end
 

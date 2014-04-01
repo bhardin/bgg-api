@@ -17,12 +17,12 @@ describe BggApi do
 
     before do
       stub_request(:any, request_url)
-        .with(:query => query)
-        .to_return(:body => expected_response, :status => 200)
+        .with(query: query)
+        .to_return(body: expected_response, status: 200)
     end
 
     describe 'BGG Search' do
-      let(:query) { {:query => 'Burgund', :type => 'boardgame'} }
+      let(:query) { {query: 'Burgund', type: 'boardgame'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
       let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
 
@@ -32,7 +32,7 @@ describe BggApi do
     end
 
     describe 'BGG Thing' do
-      let(:query) { {:id => '84876', :type => 'boardgame'} }
+      let(:query) { {id: '84876', type: 'boardgame'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/thing' }
       let(:response_file) { 'sample_data/thing?id=84876&type=boardgame' }
 
@@ -46,7 +46,7 @@ describe BggApi do
     end
 
     describe 'BGG Collection' do
-      let(:query) { {:own => '1', :username => 'texasjdl', :type => 'boardgame'} }
+      let(:query) { {own: '1', username: 'texasjdl', type: 'boardgame'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/collection' }
       let(:response_file) { 'sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion' }
 
@@ -60,7 +60,7 @@ describe BggApi do
     end
 
     describe 'BGG Hot Items' do
-      let(:query) { {:type => 'boardgame'} }
+      let(:query) { {type: 'boardgame'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/hot' }
       let(:response_file) { 'sample_data/hot?type=boardgame' }
 
@@ -74,7 +74,7 @@ describe BggApi do
     end
 
     describe 'BGG Plays' do
-      let(:query) { {:id => '84876', :username => 'texasjdl'} }
+      let(:query) { {id: '84876', username: 'texasjdl'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/plays' }
       let(:response_file) { 'sample_data/plays?username=texasjdl&id=84876' }
 
