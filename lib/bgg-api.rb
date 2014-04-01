@@ -48,13 +48,11 @@ class BggApi
     return if xml['boardgame'][0].has_key?('error')
 
     game_data  = xml['boardgame'][0]
-    name_nodes = game_data['name']
 
-    primary_node = name_nodes.find { |name| name['primary'] == 'true' }
-    primary_name = primary_node['content']
+    primary_name = (game_data['name'].find{ |name| name['primary'] == 'true' })['content']
 
-    other_game_nodes = name_nodes.reject { |name| name['primary'] == 'true' }
-    other_game_names = other_game_nodes.map { |node| node['content'] }
+    other_game_names = (game_data['name'].reject { |name| name['primary'] == 'true' }).
+                         map { |node| node['content'] }
 
     return {
       id:    id,
