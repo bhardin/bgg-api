@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe BggApi do
+describe 'BggApi basic API calls' do
   let(:bgg) { BggApi.new }
 
-  describe 'calling undefined methods' do
+  context 'when calling an undefined method' do
     subject { bgg.foo }
 
     it 'raises an UndefinedMethodError' do
@@ -12,7 +12,6 @@ describe BggApi do
   end
 
   context 'with stubbed responses' do
-
     let(:expected_response) { File.open(response_file) }
 
     before do
