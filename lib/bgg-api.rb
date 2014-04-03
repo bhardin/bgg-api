@@ -107,11 +107,11 @@ class BggApi
   end
 
   METHODS.each do |method|
-    define_method(method) do |params|
+    define_singleton_method(method) do |params|
       params ||= {}
 
       url = BASE_URI + '/' + method.to_s
-      response = self.class.get(url, :query => params)
+      response = self.get(url, :query => params)
 
       if response.code == 200
         xml_data = response.body
