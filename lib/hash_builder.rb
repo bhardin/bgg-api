@@ -33,12 +33,23 @@ class HashBuilder
 
     def build_players(play, players)
       play['players'][0]['player'].each do |player|
-        players << Hash[:name, player['name'], :win, player['win'].to_i, :score, player['score']]
+        players << {
+          name: player['name'],
+          win: player['win'].to_i,
+          score: player['score']
+        }
       end
     end
 
     def build_plays(play, players, plays)
-      plays << Hash[:date, play['date'], :nowinstats, play['nowinstats'].to_i, :boardgame, play['item'][0]['name'], :objectid, play['item'][0]['objectid'].to_i, :players, players, :comments, play['comments']]
+      plays << {
+        date: play['date'],
+        nowinstats: play['nowinstats'].to_i,
+        boardgame: play['item'][0]['name'],
+        objectid: play['item'][0]['objectid'].to_i,
+        players: players,
+        comments: play['comments']
+      }
     end
   end
 end
