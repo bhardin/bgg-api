@@ -1,6 +1,7 @@
 class BggUser
-  attr_reader :name, :first_name, :last_name, :id, :avatar_link,
-              :last_login, :state, :country, :year_registered
+  attr_reader :avatar_link, :country, :first_name, :id,
+              :last_login, :last_name, :name, :state,
+              :year_registered
 
   def initialize(user_data)
     @id = user_data['id']
