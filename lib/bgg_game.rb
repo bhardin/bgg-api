@@ -1,5 +1,9 @@
 class BggGame
-  attr_reader :alternate_names, :artist_list, :description, :designer_list, :id, :image, :max_players, :min_players, :minimum_age, :name, :names, :playing_time, :publisher_list, :thumbnail, :year_published
+  attr_reader :alternate_names, :artist_list, :description,
+              :designer_list, :id, :image, :max_players,
+              :min_players, :minimum_age, :name, :names,
+              :playing_time, :publisher_list,
+              :thumbnail, :year_published
 
   def initialize(game_data)
     @game_data = game_data
@@ -40,6 +44,8 @@ class BggGame
   private
 
   def filter_links_for(key)
-    @game_data['link'].find_all{ |l| l.fetch('type', '') == key }.map{ |l| l['value'] }
+    @game_data['link'].
+      find_all{ |l| l.fetch('type', '') == key }.
+      map{ |l| l['value'] }
   end
 end
