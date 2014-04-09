@@ -48,8 +48,7 @@ class BggUser
     some_plays.fetch('total', 0).to_i
   end
 
-  def game_count
-    collection = BggApi.collection({username: self.name, own: 1})
-    collection.fetch('totalitems', 0).to_i
+  def collection
+    BggCollection.find_by_username(self.name)
   end
 end

@@ -66,7 +66,7 @@ describe BggUser do
           to_return(body: File.open(response_file), status: 200)
       end
 
-      describe '#play_count' do
+      describe '.play_count' do
         it 'returns the number of plays when the user has plays' do
           stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/plays').
             with(query: {username: 'texasjdl', page: 1}).
@@ -76,13 +76,17 @@ describe BggUser do
         end
       end
 
-      describe 'game_count' do
-        it 'returns the number of games the user owns' do
+      describe 'collection' do
+        it 'returns the collection object representing the collection for the user' do
           stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/collection').
-            with(query: {username: 'texasjdl', own: 1}).
-            to_return(body: File.open('sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion'), status: 200)
+            with(query: {username: 'texasjdl'}).
+            to_return(body: File.open('sample_data/collection?username=texasjdl'), status: 200)
 
-          expect( texasjdl.game_count ).to eq(301)
+          collection = texasjdl.collection
+
+          expect( collection ).to be_instance_of(BggCollection)
+          expect( collection.owned.first ).to be_instance_of(BggCollectionItem)
+          expect( collection.size ).to eq(604)
         end
       end
     end
