@@ -1,5 +1,5 @@
 class BggCollectionItem
-  attr_reader :collection_id, :id, :image, :name,
+  attr_reader :collection_id, :comment, :id, :image, :name,
               :play_count, :thumbnail, :type, :year_published
 
 
@@ -9,6 +9,7 @@ class BggCollectionItem
     @collection_id = item['collid'].to_i
     @play_count = item['numplays'][0].to_i
 
+    @comment = item.fetch('comment', [])[0]
     @image = item['image'][0]
     @name = item['name'][0]['content']
     @thumbnail = item['thumbnail'][0]
@@ -56,5 +57,9 @@ class BggCollectionItem
 
   def published?
     @year_published != 0
+  end
+
+  def game
+    BggGame.find_by_id(self.id)
   end
 end

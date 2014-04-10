@@ -3,7 +3,18 @@ require 'spec_helper'
 
 describe BggCollectionItem do
   describe 'instance' do
-    let(:item_data) { {'objecttype'=>'thing', 'objectid'=>'70512', 'subtype'=>'boardgame', 'collid'=>'11455824', "name"=>[{'sortindex'=>'1', 'content'=>'Luna'}], 'yearpublished'=>['2010'], 'image'=>['http://cf.geekdo-images.com/images/pic802342.jpg'], 'thumbnail'=>['http://cf.geekdo-images.com/images/pic802342_t.jpg'], 'status'=>[{'own'=>'1', 'prevowned'=>'0', 'fortrade'=>'0', 'want'=>'0', 'wanttoplay'=>'0', 'wanttobuy'=>'0', "wishlist"=>'0', 'preordered'=>'0', 'lastmodified'=>'2007-02-18 21:20:51'}], 'numplays'=>['7'], 'comment'=>['Never played.']} }
+    let(:item_data) { {'objecttype'=>'thing',
+                       'objectid'=>'70512',
+                       'subtype'=>'boardgame',
+                       'collid'=>'11455824',
+                       'name'=>[{'sortindex'=>'1', 'content'=>'Luna'}],
+                       'yearpublished'=>['2010'],
+                       'image'=>['http://cf.geekdo-images.com/images/pic802342.jpg'],
+                       'thumbnail'=>['http://cf.geekdo-images.com/images/pic802342_t.jpg'],
+                       'status'=>[{'own'=>'1', 'prevowned'=>'0', 'fortrade'=>'0', 'want'=>'0', 'wanttoplay'=>'0', 'wanttobuy'=>'0', "wishlist"=>'0', 'preordered'=>'0', 'lastmodified'=>'2007-02-18 21:20:51'}],
+                       'numplays'=>['7'],
+                       'comment'=>['Never played.']} }
+
     let(:item) { BggCollectionItem.new(item_data) }
 
     describe '.id' do
@@ -116,7 +127,6 @@ describe BggCollectionItem do
       end
     end
 
-
     describe '.preordered?' do
       it 'exists' do
         expect( item ).to respond_to(:preordered?)
@@ -132,7 +142,6 @@ describe BggCollectionItem do
         expect( item.preordered? ).to eq(false)
       end
     end
-
 
     describe '.want_to_play?' do
       it 'exists' do
@@ -217,6 +226,37 @@ describe BggCollectionItem do
 
       it 'returns the correct value' do
         expect( item.image ).to eq('http://cf.geekdo-images.com/images/pic802342.jpg')
+      end
+    end
+
+    describe '.comment' do
+      it 'exists' do
+        expect( item ).to respond_to(:comment)
+      end
+
+      it 'returns the correct value' do
+        expect( item.comment ).to eq('Never played.')
+      end
+    end
+
+    describe '.game' do
+      it 'exists' do
+        expect( item ).to respond_to(:game)
+      end
+
+      it 'returns a BggGame object corresponding to the entry' do
+        response_file = 'sample_data/thing?id=70512&type=boardgame'
+        request_url = 'http://www.boardgamegeek.com/xmlapi2/thing'
+
+        stub_request(:any, request_url).
+          with(query: {id: 70512, type: 'boardgame'}).
+          to_return(body: File.open(response_file), status: 200)
+
+        game = item.game
+
+        expect( game ).to be_instance_of(BggGame)
+        expect( game.name ).to eq('Luna')
+        expect( game.designer_list ).to eq(['Stefan Feld'])
       end
     end
   end
