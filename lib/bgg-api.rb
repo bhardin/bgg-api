@@ -23,54 +23,6 @@ class BggApi
   BASE_URI = 'http://www.boardgamegeek.com/xmlapi2'
   OLD_URI  = 'http://www.boardgamegeek.com/xmlapi'
 
-  def self.search_by_name(name,type='boardgame')
-    response = get(BASE_URI + '/search', query: {query: name, type: type})
-
-    return if response.code != 200
-
-    xml = XmlSimple.xml_in(response.body)
-    return if xml['total'] == '0'
-
-    xml['item'].map do |item|
-      {
-        id:   item['id'].to_i,
-        name: item['name'][0]['value'],
-        type: item['type'],
-      }
-    end
-  end
-
-  def self.search_boardgame_by_id(id,type='boardgame')
-    response = get("#{OLD_URI}/boardgame/#{id}")
-    return unless response.code == 200
-
-    xml = XmlSimple.xml_in(response.body)
-    return if xml['boardgame'][0].has_key?('error')
-
-    game_data  = xml['boardgame'][0]
-
-    primary_name = (game_data['name'].find{ |name| name['primary'] == 'true' })['content']
-
-    other_game_names = (game_data['name'].reject { |name| name['primary'] == 'true' }).
-                         map { |node| node['content'] }
-
-    return {
-      id:    id,
-      name:  primary_name,
-
-      age:            game_data['age'][0],
-      alternatenames: other_game_names.sort,
-      description:    game_data['description'][0],
-      image:          game_data['image'][0],
-      maxplayers:     game_data['maxplayers'][0],
-      minplayers:     game_data['minplayers'][0],
-      playingtime:    game_data['playingtime'][0],
-      thumbnail:      game_data['thumbnail'][0],
-      yearpublished:  game_data['yearpublished'][0],
-    }
-
-  end
-
   def self.entire_user_plays(username, page=1)
     response = get(BASE_URI + '/plays', :query => {:username => username, :page => page})
     return if response.code != 200
