@@ -1,9 +1,10 @@
 class BggGame
-  attr_reader :alternate_names, :artist_list, :description,
-              :designer_list, :id, :image, :max_players,
-              :min_players, :minimum_age, :name, :names,
-              :playing_time, :publisher_list,
-              :thumbnail, :year_published
+  attr_reader :alternate_names, :artists, :categories,
+              :description, :designers, :families, :id,
+              :image, :max_players, :mechanics, :min_players,
+              :name, :names, :playing_time, :publishers,
+              :recommended_minimum_age, :thumbnail,
+              :year_published
 
   def initialize(game_data)
     @game_data = game_data
@@ -13,15 +14,18 @@ class BggGame
     @name = game_data['name'].find{ |n| n.fetch('type', '') == 'primary'}['value']
 
     @alternate_names = @names.reject{ |name| name == @name }
-    @artist_list = filter_links_for('boardgameartist')
+    @artists = filter_links_for('boardgameartist')
+    @categories = filter_links_for('boardgamecategory')
     @description = game_data['description'][0]
-    @designer_list = filter_links_for('boardgamedesigner')
+    @designers = filter_links_for('boardgamedesigner')
+    @families = filter_links_for('boardgamefamily')
     @image = game_data['image'][0]
     @max_players = game_data['maxplayers'][0]['value'].to_i
+    @mechanics = filter_links_for('boardgamemechanic')
     @min_players = game_data['minplayers'][0]['value'].to_i
-    @minimum_age = game_data['minage'][0]['value'].to_i
     @playing_time = game_data['playingtime'][0]['value'].to_i
-    @publisher_list = filter_links_for('boardgamepublisher')
+    @publishers = filter_links_for('boardgamepublisher')
+    @recommended_minimum_age = game_data['minage'][0]['value'].to_i
     @thumbnail = game_data['thumbnail'][0]
     @year_published = game_data['yearpublished'][0]['value'].to_i
   end

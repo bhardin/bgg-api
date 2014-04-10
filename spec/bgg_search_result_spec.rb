@@ -64,7 +64,7 @@ describe BggSearchResult do
 
         expect( game ).to be_instance_of(BggGame)
         expect( game.name ).to eq('The Castles of Burgundy')
-        expect( game.designer_list ).to eq(['Stefan Feld'])
+        expect( game.designers ).to eq(['Stefan Feld'])
       end
     end
   end

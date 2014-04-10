@@ -38,6 +38,7 @@ describe BggGame do
 
   describe 'instance' do
     let(:burgund) { BggGame.find_by_id(84876) }
+
     before do
       response_file = 'sample_data/thing?id=84876&type=boardgame'
       request_url = 'http://www.boardgamegeek.com/xmlapi2/thing'
@@ -47,64 +48,195 @@ describe BggGame do
         to_return(body: File.open(response_file), status: 200)
     end
 
-    it 'has id' do
-      expect( burgund.id ).to eq(84876)
+    describe '.id' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:id)
+      end
+
+      it 'returns the BGG Thing id' do
+        expect( burgund.id ).to eq(84876)
+      end
     end
 
-    it 'has name' do
-      expect( burgund.name ).to eq('The Castles of Burgundy')
+    describe '.name' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:name)
+      end
+
+      it 'returns the primary name' do
+        expect( burgund.name ).to eq('The Castles of Burgundy')
+      end
     end
 
-    it 'has names' do
-      expect( burgund.names ).to match_array(['The Castles of Burgundy', 'Les Châteaux de Bourgogne', 'Die Burgen von Burgund'])
+    describe '.names' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:names)
+      end
+
+      it 'returns a list of all names -- primary and alternates' do
+        expect( burgund.names ).to match_array(['The Castles of Burgundy', 'Les Châteaux de Bourgogne', 'Die Burgen von Burgund'])
+      end
     end
 
-    it 'has alternate names' do
-      expect( burgund.alternate_names ).to match_array(['Les Châteaux de Bourgogne', 'Die Burgen von Burgund'])
+    describe '.alternate_names' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:alternate_names)
+      end
+
+      it 'returns a list of the alternate/foreign names -- without the primary name' do
+        expect( burgund.alternate_names ).to match_array(['Les Châteaux de Bourgogne', 'Die Burgen von Burgund'])
+      end
     end
 
-    it 'has artist_list' do
-      expect( burgund.artist_list ).to match_array(['Harald Lieske', 'Julien Delval'])
+    describe '.artists' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:artists)
+      end
+
+      it 'returns a list of the game artists' do
+        expect( burgund.artists ).to match_array(['Harald Lieske', 'Julien Delval'])
+      end
     end
 
-    it 'has description' do
-      expect( burgund.description ).to match(/The game is set in the Burgundy region of High Medieval France\./)
+    describe '.description' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:description)
+      end
+
+      it 'returns the text description of the game' do
+        expect( burgund.description ).to match(/The game is set in the Burgundy region of High Medieval France\./)
+        expect( burgund.description.length ).to eq(1049)
+      end
     end
 
-    it 'has designer_list' do
-      expect( burgund.designer_list ).to match_array(['Stefan Feld'])
+    describe '.designers' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:designers)
+      end
+
+      it 'returns a list of the designers' do
+        expect( burgund.designers ).to match_array(['Stefan Feld'])
+      end
     end
 
-    it 'has image' do
-      expect( burgund.image ).to eq('http://cf.geekdo-images.com/images/pic1176894.jpg')
+    describe '.image' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:image)
+      end
+
+      it 'returns a URL to an image for the game' do
+        expect( burgund.image ).to eq('http://cf.geekdo-images.com/images/pic1176894.jpg')
+      end
     end
 
-    it 'has min_players' do
-      expect( burgund.min_players ).to eq(2)
+    describe '.min_players' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:min_players)
+      end
+
+      it 'returns the minimum number of players' do
+        expect( burgund.min_players ).to eq(2)
+      end
     end
 
-    it 'has max_players' do
-      expect( burgund.max_players ).to eq(4)
+    describe '.max_players' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:max_players)
+      end
+
+      it 'returns the maximum number of players' do
+        expect( burgund.max_players ).to eq(4)
+      end
     end
 
-    it 'has minimum_age' do
-      expect( burgund.minimum_age ).to eq(12)
+    describe '.minimum_recommended_age' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:recommended_minimum_age)
+      end
+
+      it 'returns the recommended minimum age' do
+        expect( burgund.recommended_minimum_age ).to eq(12)
+      end
+
+      it 'returns nil if there is no recommended minimum age' do
+        pending 'need to restructure how tests are run to inject this data'
+        expect( burgund.recommended_minimum_age ).to eq(nil)
+      end
     end
 
-    it 'has playing_time' do
-      expect( burgund.playing_time ).to eq(90)
+    describe '.playing_time' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:playing_time)
+      end
+
+      it 'has playing_time' do
+        expect( burgund.playing_time ).to eq(90)
+      end
     end
 
-    it 'has publisher_list' do
-      expect( burgund.publisher_list ).to match_array(['Ravensburger', 'alea'])
+    describe '.publishers' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:publishers)
+      end
+
+      it 'returns a list of publisher names' do
+        expect( burgund.publishers ).to match_array(['Ravensburger', 'alea'])
+      end
     end
 
-    it 'has thumbnail' do
-      expect( burgund.thumbnail ).to eq('http://cf.geekdo-images.com/images/pic1176894_t.jpg')
+    describe '.thumbnail' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:thumbnail)
+      end
+
+      it 'returns a URL to a thumbnail' do
+        expect( burgund.thumbnail ).to eq('http://cf.geekdo-images.com/images/pic1176894_t.jpg')
+      end
     end
 
-    it 'has year_published' do
-      expect( burgund.year_published ).to eq(2011)
+    describe '.year_published' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:year_published)
+      end
+
+      it 'returns the only year published' do
+        expect( burgund.year_published ).to eq(2011)
+      end
+
+      it 'returns the earliest year published' do
+        pending 'need to restructure how tests are run to inject this data'
+        expect( burgund.year_published ).to eq(2011)
+      end
+    end
+
+    describe '.mechanics' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:mechanics)
+      end
+
+      it 'returns the mechanisms used in the game' do
+        expect( burgund.mechanics ).to match_array(['Dice Rolling', 'Set Collection', 'Tile Placement'])
+      end
+    end
+
+    describe '.categories' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:categories)
+      end
+
+      it 'returns the minimum number of players' do
+        expect( burgund.categories ).to match_array(['Dice', 'Medieval', 'Territory Building'])
+      end
+    end
+
+    describe '.families' do
+      it 'exists' do
+        expect( burgund ).to respond_to(:families)
+      end
+
+      it 'returns the minimum number of players' do
+        expect( burgund.families ).to match_array(['Alea Big Box', 'Country: France'])
+      end
     end
   end
 end
