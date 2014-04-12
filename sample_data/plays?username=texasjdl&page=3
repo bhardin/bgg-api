@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plays username="texasjdl" userid="39488" total="2467" page="3" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+  <play id="6648474" date="2011-11-26" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trendy" objecttype="thing" objectid="1412">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6646909" date="2011-11-25" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Luna" objecttype="thing" objectid="70512">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6646912" date="2011-11-25" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Power Grid: The First Sparks" objecttype="thing" objectid="106662">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6646907" date="2011-11-25" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630105" date="2011-11-22" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6627618" date="2011-11-21" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Colorado Midland" objecttype="thing" objectid="102151">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630106" date="2011-11-20" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ora et Labora" objecttype="thing" objectid="70149">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630110" date="2011-11-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kalimambo" objecttype="thing" objectid="108157">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630113" date="2011-11-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kalimambo" objecttype="thing" objectid="108157">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630107" date="2011-11-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ora et Labora" objecttype="thing" objectid="70149">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630108" date="2011-11-18" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ora et Labora" objecttype="thing" objectid="70149">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630157" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630166" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ab in die Tonne" objecttype="thing" objectid="109657">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630163" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Power Grid: The First Sparks" objecttype="thing" objectid="106662">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630165" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tournay" objecttype="thing" objectid="105037">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630120" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630158" date="2011-11-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630156" date="2011-11-16" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630124" date="2011-11-16" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Battle Sheep" objecttype="thing" objectid="54137">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630122" date="2011-11-16" quantity="2" length="0" incomplete="0" nowinstats="0" location="BGG.Con">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630125" date="2011-11-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Rosenkönig" objecttype="thing" objectid="201">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630148" date="2011-11-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Schlacht am Buffet" objecttype="thing" objectid="93138">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630126" date="2011-11-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tournay" objecttype="thing" objectid="105037">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6594387" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6592920" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6594384" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6592923" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Pala" objecttype="thing" objectid="37441">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6594388" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Race for the Galaxy" objecttype="thing" objectid="28143">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6594386" date="2011-11-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Vanuatu" objecttype="thing" objectid="104020">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6586484" date="2011-11-13" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6586490" date="2011-11-13" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hawaii" objecttype="thing" objectid="106217">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6586489" date="2011-11-13" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mondo" objecttype="thing" objectid="91523">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6585776" date="2011-11-13" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Prêt-à-Porter" objecttype="thing" objectid="87890">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6586483" date="2011-11-13" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Rosenkönig" objecttype="thing" objectid="201">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6586488" date="2011-11-13" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Uluru: Tumult am Ayers Rock" objecttype="thing" objectid="90870">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6518137" date="2011-10-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tournay" objecttype="thing" objectid="105037">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6518149" date="2011-10-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Vanuatu" objecttype="thing" objectid="104020">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6511550" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6511878" date="2011-10-29" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="23" objecttype="thing" objectid="103651">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6510686" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Arriala: Canal de Garonne" objecttype="thing" objectid="70097">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6511882" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Carré" objecttype="thing" objectid="103640">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6511886" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kalimambo" objecttype="thing" objectid="108157">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6510695" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6513361" date="2011-10-29" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6510696" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mondriaan 2020" objecttype="thing" objectid="109612">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6511154" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="PAX" objecttype="thing" objectid="101020">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6513371" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6510687" date="2011-10-29" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Walnut Grove" objecttype="thing" objectid="103185">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6505850" date="2011-10-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6505846" date="2011-10-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mondriaan 2020" objecttype="thing" objectid="109612">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6505847" date="2011-10-20" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mondriaan 2020" objecttype="thing" objectid="109612">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6468601" date="2011-10-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6370356" date="2011-09-25" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6370358" date="2011-09-25" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Luna" objecttype="thing" objectid="70512">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6361203" date="2011-09-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Attika" objecttype="thing" objectid="8051">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6361201" date="2011-09-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Egizia" objecttype="thing" objectid="58421">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343972" date="2011-09-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Aton" objecttype="thing" objectid="19999">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343984" date="2011-09-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Dominant Species" objecttype="thing" objectid="62219">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343983" date="2011-09-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Himalaya" objecttype="thing" objectid="3800">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343969" date="2011-09-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Stich-Meister" objecttype="thing" objectid="81250">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343971" date="2011-09-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Yspahan" objecttype="thing" objectid="22345">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343989" date="2011-09-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Can't Stop" objecttype="thing" objectid="41">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6343988" date="2011-09-16" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Yspahan" objecttype="thing" objectid="22345">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6307778" date="2011-09-10" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6307776" date="2011-09-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Le Havre" objecttype="thing" objectid="35677">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6286820" date="2011-09-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Agricola" objecttype="thing" objectid="31260">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6286818" date="2011-09-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Attika" objecttype="thing" objectid="8051">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6286823" date="2011-09-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6288400" date="2011-09-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6277872" date="2011-09-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="1889" objecttype="thing" objectid="23540">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6283217" date="2011-09-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Luna" objecttype="thing" objectid="70512">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6284135" date="2011-09-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Pantheon" objecttype="thing" objectid="94480">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6283216" date="2011-09-04" quantity="3" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Race for the Galaxy" objecttype="thing" objectid="28143">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6284133" date="2011-09-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Strasbourg" objecttype="thing" objectid="91873">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6274173" date="2011-09-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Can't Stop" objecttype="thing" objectid="41">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6283223" date="2011-09-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Le Havre" objecttype="thing" objectid="35677">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6283221" date="2011-09-03" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Power Grid" objecttype="thing" objectid="2651">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6274174" date="2011-09-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Can't Stop" objecttype="thing" objectid="41">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6271385" date="2011-09-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6272511" date="2011-09-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="China: Grenzstreitigkeiten" objecttype="thing" objectid="23417">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameexpansion"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6271386" date="2011-09-02" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Perpetual-Motion Machine" objecttype="thing" objectid="69318">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6271389" date="2011-09-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Zing!" objecttype="thing" objectid="8129">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6251987" date="2011-08-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="German Railways" objecttype="thing" objectid="35285">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6251713" date="2011-08-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Himalaya" objecttype="thing" objectid="3800">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6251015" date="2011-08-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Lakota" objecttype="thing" objectid="39332">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6248035" date="2011-08-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Rum &amp; Pirates" objecttype="thing" objectid="19948">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6246271" date="2011-08-27" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hare &amp; Tortoise" objecttype="thing" objectid="361">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6246273" date="2011-08-27" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Locomotive Werks" objecttype="thing" objectid="3828">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6246276" date="2011-08-27" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Race for the Galaxy" objecttype="thing" objectid="28143">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6247541" date="2011-08-27" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Speicherstadt" objecttype="thing" objectid="66505">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6246278" date="2011-08-27" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Strasbourg" objecttype="thing" objectid="91873">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6240856" date="2011-08-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Finca" objecttype="thing" objectid="40628">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6241016" date="2011-08-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ingenious" objecttype="thing" objectid="9674">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6240855" date="2011-08-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Through the Desert" objecttype="thing" objectid="503">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6240972" date="2011-08-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Web of Power" objecttype="thing" objectid="491">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6229290" date="2011-08-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Taj Mahal" objecttype="thing" objectid="475">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6217061" date="2011-08-20" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Stone Age" objecttype="thing" objectid="34635">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6211348" date="2011-08-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Can't Stop" objecttype="thing" objectid="41">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6211350" date="2011-08-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Hanging Gardens" objecttype="thing" objectid="34707">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6211351" date="2011-08-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Olympos" objecttype="thing" objectid="92319">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+</plays>

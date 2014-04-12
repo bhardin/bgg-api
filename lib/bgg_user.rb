@@ -51,4 +51,8 @@ class BggUser
   def collection
     BggCollection.find_by_username(self.name)
   end
+
+  def plays
+    BggPlays.find_by_username(self.name)
+  end
 end

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plays username="texasjdl" userid="39488" total="2467" page="1" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+<plays username="texasjdl" userid="39488" total="299" page="1" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
   <play id="10321877" date="2013-10-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
     <item name="Fauna" objecttype="thing" objectid="35497">
       <subtypes>
         <subtype value="boardgame"/>
       </subtypes>
     </item>
+    <players>
+      <player username="" userid="0" name="Ted" startposition="" color="" score="" new="0" rating="0" win="0"/>
+      <player username="" userid="0" name="Stephanie" startposition="" color="" score="" new="0" rating="0" win="0"/>
+      <player username="" userid="0" name="Chris" startposition="" color="" score="" new="0" rating="0" win="0"/>
+      <player username="" userid="0" name="Shannon" startposition="" color="" score="" new="0" rating="0" win="0"/>
+      <player username="texasjdl" userid="39488" name="Jeremiah" startposition="" color="" score="" new="0" rating="0" win="0"/>
+    </players>
   </play>
   <play id="10138212" date="2013-09-10" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
     <item name="Lost Cities" objecttype="thing" objectid="50">
