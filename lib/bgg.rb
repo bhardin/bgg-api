@@ -40,3 +40,14 @@ class BggApi
   end
 end
 
+
+require 'bgg/bgg_collection'
+require 'bgg/bgg_collection_item'
+require 'bgg/bgg_game'
+require 'bgg/bgg_play'
+require 'bgg/bgg_plays'
+require 'bgg/bgg_plays_iterator'
+require 'bgg/bgg_search'
+require 'bgg/bgg_search_result'
+require 'bgg/bgg_user'
+
