@@ -1,7 +1,7 @@
 # encoding: UTF-8
 require 'spec_helper'
 
-describe BggPlay do
+describe Bgg::Play do
   describe 'instance' do
     let(:item_data) { {'id'=>'7680984',
                        'date'=>'2012-06-23',
@@ -12,7 +12,7 @@ describe BggPlay do
                        'location'=>'',
                        'item'=>[{'name'=>'Cheeky Monkey', 'objecttype'=>'thing', 'objectid'=>'29773', 'subtypes'=>[{'subtype'=>[{'value'=>'boardgame'}]}]}]} }
 
-    let(:item) { BggPlay.new(item_data) }
+    let(:item) { Bgg::Play.new(item_data) }
 
     describe '.id' do
       it 'exists' do
@@ -147,7 +147,7 @@ describe BggPlay do
         expect( item ).to respond_to(:game)
       end
 
-      it 'returns a BggGame object corresponding to the entry' do
+      it 'returns a Bgg::Game object corresponding to the entry' do
         response_file = 'sample_data/thing?id=29773&type=boardgame'
         request_url = 'http://www.boardgamegeek.com/xmlapi2/thing'
 
@@ -157,7 +157,7 @@ describe BggPlay do
 
         game = item.game
 
-        expect( game ).to be_instance_of(BggGame)
+        expect( game ).to be_instance_of(Bgg::Game)
         expect( game.name ).to eq('Cheeky Monkey')
         expect( game.designers ).to eq(['Reiner Knizia'])
       end

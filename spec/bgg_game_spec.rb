@@ -1,16 +1,16 @@
 # encoding: UTF-8
 require 'spec_helper'
 
-describe BggGame do
+describe Bgg::Game do
   describe 'class method' do
     describe 'find_by_id' do
       it 'throws an ArgumentError when a non-integer is passed in' do
-        expect{ BggGame.find_by_id('string instead') }.to raise_error(ArgumentError, 'invalid value for Integer(): "string instead"')
+        expect{ Bgg::Game.find_by_id('string instead') }.to raise_error(ArgumentError, 'invalid value for Integer(): "string instead"')
       end
 
       it 'throws an ArgumentError when a non-positive integer is passed in' do
-        expect{ BggGame.find_by_id(0) }.to  raise_error(ArgumentError, 'game_id must be greater than 0!')
-        expect{ BggGame.find_by_id(-1) }.to raise_error(ArgumentError, 'game_id must be greater than 0!')
+        expect{ Bgg::Game.find_by_id(0) }.to  raise_error(ArgumentError, 'game_id must be greater than 0!')
+        expect{ Bgg::Game.find_by_id(-1) }.to raise_error(ArgumentError, 'game_id must be greater than 0!')
       end
 
       it 'creates an object for a game that exists' do
@@ -18,7 +18,7 @@ describe BggGame do
         request_url = 'http://www.boardgamegeek.com/xmlapi2/thing'
 
         stub_request(:any, request_url).with(query: {id: 84876, type: 'boardgame'}).to_return(body: File.open(response_file), status: 200)
-        burgund = BggGame.find_by_id(84876)
+        burgund = Bgg::Game.find_by_id(84876)
 
         expect( burgund ).to be_a_kind_of(Object)
         expect( burgund.name ).to eq('The Castles of Burgundy')
@@ -31,13 +31,13 @@ describe BggGame do
 
         stub_request(:any, request_url).with(query: {id: 10000000, type: 'boardgame'}).to_return(body: File.open(response_file), status: 200)
 
-        expect{ BggGame.find_by_id(10000000) }.to raise_error(ArgumentError, 'Game does not exist')
+        expect{ Bgg::Game.find_by_id(10000000) }.to raise_error(ArgumentError, 'Game does not exist')
       end
     end
   end
 
   describe 'instance' do
-    let(:burgund) { BggGame.find_by_id(84876) }
+    let(:burgund) { Bgg::Game.find_by_id(84876) }
 
     before do
       response_file = 'sample_data/thing?id=84876&type=boardgame'

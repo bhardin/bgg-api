@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe BggUser do
+describe Bgg::User do
   describe 'class method' do
     describe 'find_by_id' do
       it 'throws an ArgumentError when a non-integer is passed in' do
-        expect{ BggUser.find_by_id('string instead') }.to raise_error(ArgumentError)
+        expect{ Bgg::User.find_by_id('string instead') }.to raise_error(ArgumentError)
       end
 
       it 'throws an ArgumentError when a non-positive integer is passed in' do
-        expect{ BggUser.find_by_id(0) }.to  raise_error(ArgumentError)
-        expect{ BggUser.find_by_id(-1) }.to raise_error(ArgumentError)
+        expect{ Bgg::User.find_by_id(0) }.to  raise_error(ArgumentError)
+        expect{ Bgg::User.find_by_id(-1) }.to raise_error(ArgumentError)
       end
 
       it 'creates an object for a user who exists' do
@@ -17,9 +17,9 @@ describe BggUser do
         request_url = 'http://www.boardgamegeek.com/xmlapi2/user'
 
         stub_request(:any, request_url).with(query: {id: 39488}).to_return(body: File.open(response_file), status: 200)
-        texasjdl = BggUser.find_by_id(39488)
+        texasjdl = Bgg::User.find_by_id(39488)
 
-        expect( texasjdl ).to be_a_kind_of(BggUser)
+        expect( texasjdl ).to be_a_kind_of(Bgg::User)
         expect( texasjdl.name ).to eq('texasjdl')
       end
 
@@ -29,7 +29,7 @@ describe BggUser do
 
         stub_request(:any, request_url).with(query: {id: 39488}).to_return(body: File.open(response_file), status: 200)
 
-        expect{ BggUser.find_by_id(39488) }.to raise_error(ArgumentError, 'User does not exist')
+        expect{ Bgg::User.find_by_id(39488) }.to raise_error(ArgumentError, 'User does not exist')
       end
     end
 
@@ -39,7 +39,7 @@ describe BggUser do
         request_url = 'http://www.boardgamegeek.com/xmlapi2/user'
 
         stub_request(:any, request_url).with(query: {name: 'texasjdl'}).to_return(body: File.open(response_file), status: 200)
-        texasjdl = BggUser.find_by_name('texasjdl')
+        texasjdl = Bgg::User.find_by_name('texasjdl')
 
         expect( texasjdl ).to be_a_kind_of(Object)
         expect( texasjdl.name ).to eq('texasjdl')
@@ -51,14 +51,14 @@ describe BggUser do
 
         stub_request(:any, request_url).with(query: {name: 'yyyyyyy'}).to_return(body: File.open(response_file), status: 200)
 
-        expect{ BggUser.find_by_name('yyyyyyy') }.to raise_error(ArgumentError, 'User does not exist')
+        expect{ Bgg::User.find_by_name('yyyyyyy') }.to raise_error(ArgumentError, 'User does not exist')
       end
     end
 
     describe 'instance method' do
       let(:response_file) { 'sample_data/user?name=texasjdl' }
       let(:request_url)   { 'http://www.boardgamegeek.com/xmlapi2/user' }
-      let(:texasjdl)      { BggUser.find_by_id(39488) }
+      let(:texasjdl)      { Bgg::User.find_by_id(39488) }
 
       before do
         stub_request(:any, request_url).
@@ -84,14 +84,14 @@ describe BggUser do
 
           collection = texasjdl.collection
 
-          expect( collection ).to be_instance_of(BggCollection)
-          expect( collection.owned.first ).to be_instance_of(BggCollectionItem)
+          expect( collection ).to be_instance_of(Bgg::Collection)
+          expect( collection.owned.first ).to be_instance_of(Bgg::Collection::Item)
           expect( collection.size ).to eq(604)
         end
       end
 
       describe '.plays' do
-        it 'returns a BggPlaysIterator' do
+        it 'returns a Bgg::PlaysIterator' do
           [1,2,3].each do |i|
             stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/plays').
               with(query: {username: 'texasjdl', page: i}).
@@ -101,8 +101,8 @@ describe BggUser do
           plays = texasjdl.plays
           first_play = plays.first
 
-          expect( plays ).to be_an_instance_of(BggPlaysIterator)
-          expect( first_play ).to be_an_instance_of(BggPlay)
+          expect( plays ).to be_an_instance_of(Bgg::Plays::Iterator)
+          expect( first_play ).to be_an_instance_of(Bgg::Play)
           expect( first_play.game_name ).to eq('Fauna')
           expect( first_play.players.size ).to eq(5)
           expect( first_play.players.first.name ).to eq('Ted')

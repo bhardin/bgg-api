@@ -1,13 +1,13 @@
 # encoding: UTF-8
 require 'spec_helper'
 
-describe BggPlaysIterator do
+describe Bgg::Plays::Iterator do
   describe 'instance' do
     let(:username) { 'texasjdl' }
     let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/plays' }
     let(:query) { {username: username, page: 1} }
     let(:response_file) { "sample_data/plays?username=#{username}&page=1" }
-    let(:iterator) { BggPlaysIterator.new(username) }
+    let(:iterator) { Bgg::Plays::Iterator.new(username) }
 
     before do
       stub_request(:any, request_url).
@@ -35,7 +35,7 @@ describe BggPlaysIterator do
 
     context 'when the user exists and has plays' do
       it 'returns an instance' do
-        expect( iterator ).to be_instance_of(BggPlaysIterator)
+        expect( iterator ).to be_instance_of(Bgg::Plays::Iterator)
       end
     end
 
@@ -46,7 +46,7 @@ describe BggPlaysIterator do
 
       it 'allows stepping through results' do
         iterator.each do |item|
-          expect( item ).to be_instance_of(BggPlay)
+          expect( item ).to be_instance_of(Bgg::Play)
           break if iterator.iteration == 3
         end
       end
