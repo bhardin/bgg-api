@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+  <item type="boardgame" id="29773">
+    <thumbnail>http://cf.geekdo-images.com/images/pic270766_t.jpg</thumbnail>
+    <image>http://cf.geekdo-images.com/images/pic270766.jpg</image>
+    <name type="primary" sortindex="1" value="Cheeky Monkey"/>
+    <name type="alternate" sortindex="1" value="Monkey Business"/>
+    <name type="alternate" sortindex="1" value="Обезьянки-хулиганки"/>
+    <name type="alternate" sortindex="1" value="チーキーモンキー"/>
+    <description>The push-your-luck game Cheeky Monkey includes eight sets of animals &amp;ndash; three elephants, four seals, and so on up to ten monkeys &amp;ndash; with a plastic chip representing each animal. To start the game, you place all the chips in a bag.&amp;#10;&amp;#10;On a turn, a player may draw chips until either (1) he chooses to stop or (2) he draws an animal that he has lying in front of him from a previous draw this turn. In this latter case, he returns all chips in front of him from the current turn to the bag, and the next player then takes his turn. In the former case, he stacks the chips in whatever order he wants on top of any chips he's collected in previous turns. (If a player has animals of only a single type, he can tuck them on the bottom of his stack.) Two special rules come into play while the player draws chips:&amp;#10;&amp;#10;&amp;#10;     If a player draws an animal chip that matches the animal on top of an opponent's stack, the player can steal this animal, adding it to the chips currently in front of him. (If he busts for drawing a duplicate animal, this stolen chip is also returned to the bag.)&amp;#10;     If a player draws a monkey, he can either keep the monkey (as with any other animal) or he can swap the monkey for the chip on top of an opponent's stack.&amp;#10;&amp;#10;&amp;#10;When the last chip has been added to a stack, the game ends. Any player who has more chips of an animal type than any other player receives bonus points equal to the total number of that animal in the game. The player with the most points wins.&amp;#10;&amp;#10;</description>
+    <yearpublished value="2007"/>
+    <minplayers value="2"/>
+    <maxplayers value="6"/>
+    <poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="16">
+      <results numplayers="1">
+        <result value="Best" numvotes="0"/>
+        <result value="Recommended" numvotes="0"/>
+        <result value="Not Recommended" numvotes="8"/>
+      </results>
+      <results numplayers="2">
+        <result value="Best" numvotes="0"/>
+        <result value="Recommended" numvotes="4"/>
+        <result value="Not Recommended" numvotes="8"/>
+      </results>
+      <results numplayers="3">
+        <result value="Best" numvotes="3"/>
+        <result value="Recommended" numvotes="9"/>
+        <result value="Not Recommended" numvotes="3"/>
+      </results>
+      <results numplayers="4">
+        <result value="Best" numvotes="8"/>
+        <result value="Recommended" numvotes="7"/>
+        <result value="Not Recommended" numvotes="0"/>
+      </results>
+      <results numplayers="5">
+        <result value="Best" numvotes="11"/>
+        <result value="Recommended" numvotes="4"/>
+        <result value="Not Recommended" numvotes="0"/>
+      </results>
+      <results numplayers="6">
+        <result value="Best" numvotes="8"/>
+        <result value="Recommended" numvotes="5"/>
+        <result value="Not Recommended" numvotes="1"/>
+      </results>
+      <results numplayers="6+">
+        <result value="Best" numvotes="1"/>
+        <result value="Recommended" numvotes="4"/>
+        <result value="Not Recommended" numvotes="2"/>
+      </results>
+    </poll>
+    <playingtime value="20"/>
+    <minage value="7"/>
+    <poll name="suggested_playerage" title="User Suggested Player Age" totalvotes="5">
+      <results>
+        <result value="2" numvotes="0"/>
+        <result value="3" numvotes="0"/>
+        <result value="4" numvotes="1"/>
+        <result value="5" numvotes="2"/>
+        <result value="6" numvotes="2"/>
+        <result value="8" numvotes="0"/>
+        <result value="10" numvotes="0"/>
+        <result value="12" numvotes="0"/>
+        <result value="14" numvotes="0"/>
+        <result value="16" numvotes="0"/>
+        <result value="18" numvotes="0"/>
+        <result value="21 and up" numvotes="0"/>
+      </results>
+    </poll>
+    <poll name="language_dependence" title="Language Dependence" totalvotes="3">
+      <results>
+        <result level="1" value="No necessary in-game text" numvotes="3"/>
+        <result level="2" value="Some necessary text - easily memorized or small crib sheet" numvotes="0"/>
+        <result level="3" value="Moderate in-game text - needs crib sheet or paste ups" numvotes="0"/>
+        <result level="4" value="Extensive use of text - massive conversion needed to be playable" numvotes="0"/>
+        <result level="5" value="Unplayable in another language" numvotes="0"/>
+      </results>
+    </poll>
+    <link type="boardgamecategory" id="1089" value="Animals"/>
+    <link type="boardgamecategory" id="1041" value="Children's Game"/>
+    <link type="boardgamemechanic" id="2661" value="Press Your Luck"/>
+    <link type="boardgamemechanic" id="2004" value="Set Collection"/>
+    <link type="boardgamefamily" id="7178" value="Animals: Apes / Monkeys"/>
+    <link type="boardgamedesigner" id="2" value="Reiner Knizia"/>
+    <link type="boardgameartist" id="11795" value="Rob Walker"/>
+    <link type="boardgamepublisher" id="3475" value="Arclight"/>
+    <link type="boardgamepublisher" id="1705" value="Face2Face Games"/>
+    <link type="boardgamepublisher" id="8405" value="Gryphon Games"/>
+    <link type="boardgamepublisher" id="22" value="Piatnik"/>
+  </item>
+</items>

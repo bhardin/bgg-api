@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe 'BggApi basic API calls' do
-  let(:bgg) { BggApi.new }
-
   context 'when calling an undefined method' do
-    subject { bgg.foo }
+    subject { BggApi.foo }
 
     it 'raises an UndefinedMethodError' do
       expect { subject }.to raise_error(NoMethodError)
@@ -25,7 +23,7 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
       let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
 
-      subject(:results) { bgg.search(query) }
+      subject(:results) { BggApi.search(query) }
 
       it { should_not be_nil }
     end
@@ -35,7 +33,7 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/thing' }
       let(:response_file) { 'sample_data/thing?id=84876&type=boardgame' }
 
-      subject(:results) { bgg.thing(query) }
+      subject(:results) { BggApi.thing(query) }
 
       it { should_not be_nil }
 
@@ -49,7 +47,7 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/collection' }
       let(:response_file) { 'sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion' }
 
-      subject(:results) { bgg.collection(query) }
+      subject(:results) { BggApi.collection(query) }
 
       it { should_not be_nil }
 
@@ -63,7 +61,7 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/hot' }
       let(:response_file) { 'sample_data/hot?type=boardgame' }
 
-      subject(:results) { bgg.hot(query) }
+      subject(:results) { BggApi.hot(query) }
 
       it { should_not be_nil }
 
@@ -77,7 +75,7 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/plays' }
       let(:response_file) { 'sample_data/plays?username=texasjdl&id=84876' }
 
-      subject(:results) { bgg.plays(query) }
+      subject(:results) { BggApi.plays(query) }
 
       it { should_not be_nil }
 
@@ -92,7 +90,7 @@ describe 'BggApi basic API calls' do
         let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
         let(:response_file) { 'sample_data/user?name=texasjdl' }
 
-        subject(:results) { bgg.user(query) }
+        subject(:results) { BggApi.user(query) }
 
         it { should_not be_nil }
 
@@ -106,7 +104,7 @@ describe 'BggApi basic API calls' do
         let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
         let(:response_file) { 'sample_data/user?name=yyyyyyy' }
 
-        subject(:results) { bgg.user(query) }
+        subject(:results) { BggApi.user(query) }
 
         it { should raise_error }
       end

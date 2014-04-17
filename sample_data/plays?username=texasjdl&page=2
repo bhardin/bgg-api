@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plays username="texasjdl" userid="39488" total="2467" page="2" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+  <play id="7680976" date="2012-06-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Titania" objecttype="thing" objectid="66613">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7680977" date="2012-06-23" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Vikings" objecttype="thing" objectid="27173">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7666810" date="2012-06-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Attika" objecttype="thing" objectid="8051">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668880" date="2012-06-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668876" date="2012-06-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Cheeky Monkey" objecttype="thing" objectid="29773">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668883" date="2012-06-19" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Notre Dame" objecttype="thing" objectid="25554">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668878" date="2012-06-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Cheeky Monkey" objecttype="thing" objectid="29773">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668874" date="2012-06-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hawaii" objecttype="thing" objectid="106217">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645080" date="2012-06-15" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ra: The Dice Game" objecttype="thing" objectid="35503">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7668871" date="2012-06-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ra: The Dice Game" objecttype="thing" objectid="35503">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645014" date="2012-06-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Atlantis" objecttype="thing" objectid="55253">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645016" date="2012-06-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mondriaan 2020" objecttype="thing" objectid="109612">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645015" date="2012-06-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Richelieu" objecttype="thing" objectid="5795">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645082" date="2012-06-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Saint Petersburg" objecttype="thing" objectid="9217">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7645083" date="2012-06-11" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ticket to Ride" objecttype="thing" objectid="9209">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573103" date="2012-05-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Cheeky Monkey" objecttype="thing" objectid="29773">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573100" date="2012-05-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Dog" objecttype="thing" objectid="2633">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573104" date="2012-05-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Lords of Waterdeep" objecttype="thing" objectid="110327">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573101" date="2012-05-30" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mexica" objecttype="thing" objectid="2955">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573162" date="2012-05-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kalimambo" objecttype="thing" objectid="108157">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573159" date="2012-05-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medici" objecttype="thing" objectid="46">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7573160" date="2012-05-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Smarty Party!" objecttype="thing" objectid="7062">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7447307" date="2012-05-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="DVONN" objecttype="thing" objectid="2346">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7442967" date="2012-05-02" quantity="3" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="TZAAR" objecttype="thing" objectid="31999">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7434744" date="2012-04-30" quantity="4" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="DVONN" objecttype="thing" objectid="2346">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7407118" date="2012-04-20" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Antiquity" objecttype="thing" objectid="13122">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7381784" date="2012-04-20" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7376223" date="2012-04-18" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Egizia" objecttype="thing" objectid="58421">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7376208" date="2012-04-18" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tichu" objecttype="thing" objectid="215">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7376206" date="2012-04-18" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tournay" objecttype="thing" objectid="105037">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7372396" date="2012-04-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hawaii" objecttype="thing" objectid="106217">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7372397" date="2012-04-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Octopus' Garden" objecttype="thing" objectid="85800">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7376211" date="2012-04-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Tichu" objecttype="thing" objectid="215">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7365463" date="2012-04-16" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Würfel Bohnanza" objecttype="thing" objectid="111148">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7365461" date="2012-04-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7365460" date="2012-04-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Unpublished Prototype" objecttype="thing" objectid="18291">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7365462" date="2012-04-15" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Würfel Bohnanza" objecttype="thing" objectid="111148">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7358722" date="2012-04-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medieval Merchant" objecttype="thing" objectid="296">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7358720" date="2012-04-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Taj Mahal" objecttype="thing" objectid="475">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7358726" date="2012-04-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7358724" date="2012-04-14" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Wizard" objecttype="thing" objectid="1465">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189917" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Amun-Re" objecttype="thing" objectid="5404">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189916" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Dog" objecttype="thing" objectid="2633">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189920" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medici" objecttype="thing" objectid="46">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189926" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medici" objecttype="thing" objectid="46">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189913" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ra: The Dice Game" objecttype="thing" objectid="35503">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7189923" date="2012-03-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Yspahan" objecttype="thing" objectid="22345">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7152848" date="2012-03-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="El Grande" objecttype="thing" objectid="93">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7152849" date="2012-03-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="It Happens.." objecttype="thing" objectid="66193">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7017673" date="2012-02-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7017677" date="2012-02-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medici" objecttype="thing" objectid="46">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7010377" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7010381" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Coerceo" objecttype="thing" objectid="84783">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7013100" date="2012-02-04" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hanabi &amp; Ikebana" objecttype="thing" objectid="70918">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgamecompilation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7013102" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Hanabi &amp; Ikebana" objecttype="thing" objectid="70918">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgamecompilation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7013104" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Helvetia" objecttype="thing" objectid="103092">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7014788" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kalimambo" objecttype="thing" objectid="108157">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7010379" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7014833" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Notre Dame" objecttype="thing" objectid="25554">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7014793" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Pit" objecttype="thing" objectid="140">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7011330" date="2012-02-04" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Yspahan" objecttype="thing" objectid="22345">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7005306" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Indonesia" objecttype="thing" objectid="19777">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7005305" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7005862" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Lancaster" objecttype="thing" objectid="96913">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7006272" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Pilus" objecttype="thing" objectid="67767">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7006271" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="RED" objecttype="thing" objectid="112118">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7006652" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Vanuatu" objecttype="thing" objectid="104020">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7007377" date="2012-02-03" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Wizard" objecttype="thing" objectid="1465">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7003292" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7003295" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Haggis" objecttype="thing" objectid="37628">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7004738" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="It Happens.." objecttype="thing" objectid="66193">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7002226" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="M" objecttype="thing" objectid="872">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7003291" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Medieval Merchant" objecttype="thing" objectid="296">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7003284" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mykerinos" objecttype="thing" objectid="21441">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="7003286" date="2012-02-02" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Zing!" objecttype="thing" objectid="8129">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6979219" date="2012-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="China" objecttype="thing" objectid="18100">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6979221" date="2012-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Citadels" objecttype="thing" objectid="478">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6979228" date="2012-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="San Marco" objecttype="thing" objectid="1041">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6979207" date="2012-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Vikings" objecttype="thing" objectid="27173">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6979217" date="2012-01-28" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Wizard" objecttype="thing" objectid="1465">
+      <subtypes>
+        <subtype value="boardgame"/>
+        <subtype value="boardgameimplementation"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6985025" date="2012-01-22" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Confusion:  Espionage and Deception in the Cold War" objecttype="thing" objectid="2961">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6890723" date="2012-01-11" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="It Happens.." objecttype="thing" objectid="66193">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6890746" date="2012-01-11" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Mutton" objecttype="thing" objectid="38975">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6890719" date="2012-01-11" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Ora et Labora" objecttype="thing" objectid="70149">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6890760" date="2012-01-10" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Confusion:  Espionage and Deception in the Cold War" objecttype="thing" objectid="2961">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6864600" date="2012-01-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="The Castles of Burgundy" objecttype="thing" objectid="84876">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6865379" date="2012-01-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Kingdom Builder" objecttype="thing" objectid="107529">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6864597" date="2012-01-07" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Macao" objecttype="thing" objectid="55670">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6830096" date="2012-01-01" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Blokus" objecttype="thing" objectid="2453">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6830359" date="2012-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Blokus" objecttype="thing" objectid="2453">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6830100" date="2012-01-01" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Guillotine" objecttype="thing" objectid="116">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6739072" date="2011-12-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Aquileia" objecttype="thing" objectid="108161">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6739068" date="2011-12-17" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Titania" objecttype="thing" objectid="66613">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6691056" date="2011-12-05" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Big Boss" objecttype="thing" objectid="313">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6691288" date="2011-12-05" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Schlacht am Buffet" objecttype="thing" objectid="93138">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6647123" date="2011-11-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Big Boss" objecttype="thing" objectid="313">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6647915" date="2011-11-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Colorado Midland" objecttype="thing" objectid="102151">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6648313" date="2011-11-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Notre Dame" objecttype="thing" objectid="25554">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6650724" date="2011-11-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Titania" objecttype="thing" objectid="66613">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+  <play id="6630118" date="2011-11-26" quantity="1" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Trajan" objecttype="thing" objectid="102680">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+  </play>
+</plays>
