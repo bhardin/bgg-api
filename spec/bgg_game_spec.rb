@@ -157,11 +157,6 @@ describe Bgg::Game do
       it 'returns the recommended minimum age' do
         expect( burgund.recommended_minimum_age ).to eq(12)
       end
-
-      it 'returns nil if there is no recommended minimum age' do
-        pending 'need to restructure how tests are run to inject this data'
-        expect( burgund.recommended_minimum_age ).to eq(nil)
-      end
     end
 
     describe '.playing_time' do
@@ -200,11 +195,6 @@ describe Bgg::Game do
       end
 
       it 'returns the only year published' do
-        expect( burgund.year_published ).to eq(2011)
-      end
-
-      it 'returns the earliest year published' do
-        pending 'need to restructure how tests are run to inject this data'
         expect( burgund.year_published ).to eq(2011)
       end
     end
