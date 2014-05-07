@@ -80,5 +80,4 @@ describe Bgg::Collection do
       expect( collection.count ).to eq(604)
     end
   end
-
 end
