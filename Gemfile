@@ -13,6 +13,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'codeclimate-test-reporter'
 	gem 'rake'
 	gem 'rspec'
 end

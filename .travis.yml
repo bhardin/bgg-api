@@ -2,3 +2,5 @@ language: "ruby"
 rvm:
   - "1.9.3"
   - "2.0.0"
+before_script: 'bundle'
+script: 'CODECLIMATE_REPO_TOKEN=187555d2e125f5add7c7150d4e529f7f872510808a16aaad4a62e5cc1c1eb53c bundle exec rake'
