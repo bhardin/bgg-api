@@ -12,7 +12,7 @@ task default: :spec
 
 Jeweler::Tasks.new do |gem|
   gem.name = 'bgg'
-  gem.homepage = 'http://github.com/jemaihlee/bgg'
+  gem.homepage = 'http://github.com/jemiahlee/bgg'
   gem.license = 'MIT'
   gem.summary = 'object-oriented boardgamegeek api gem'
   gem.description = 'Object-oriented interface for interacting with Boardgamegeek API'
