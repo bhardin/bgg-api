@@ -5,15 +5,15 @@ describe Bgg::Plays do
   describe 'class method' do
     describe 'find_by_username' do
       it 'throws an ArgumentError when a number is passed in' do
-        expect{ Bgg::Collection.find_by_username(38383) }.to raise_error(ArgumentError)
+        expect{ Bgg::Plays.find_by_username(38383) }.to raise_error(ArgumentError)
       end
 
       it 'throws an ArgumentError when an empty string is passed in' do
-        expect{ Bgg::Collection.find_by_username('') }.to raise_error(ArgumentError)
+        expect{ Bgg::Plays.find_by_username('') }.to raise_error(ArgumentError)
       end
 
       it 'throws an ArgumentError when a string of only numbers is passed in' do
-        expect{ Bgg::Collection.find_by_username('38383') }.to raise_error(ArgumentError)
+        expect{ Bgg::Plays.find_by_username('38383') }.to raise_error(ArgumentError)
       end
 
       it 'throws an ArgumentError when a non-existent user is passed in' do

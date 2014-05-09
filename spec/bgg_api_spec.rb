@@ -9,13 +9,32 @@ describe 'BggApi basic API calls' do
     end
   end
 
+  context 'when non-200 responses' do
+    let(:expected_response) { File.open(response_file) }
+    let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
+    let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
+
+    before do
+      stub_request(:any, request_url)
+        .with(query: query)
+        .to_return(body: expected_response, status: 500)
+    end
+
+    describe 'BGG Search' do
+      let(:query) { {query: 'Burgund', type: 'boardgame'} }
+      it 'throws an error when non-200 response is received' do
+        expect{BggApi.search(query)}.to raise_error
+      end
+    end
+  end
+
   context 'with stubbed responses' do
     let(:expected_response) { File.open(response_file) }
 
     before do
       stub_request(:any, request_url)
-      .with(query: query)
-      .to_return(body: expected_response, status: 200)
+        .with(query: query)
+        .to_return(body: expected_response, status: 200)
     end
 
     describe 'BGG Search' do

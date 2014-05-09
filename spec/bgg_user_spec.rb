@@ -45,6 +45,10 @@ describe Bgg::User do
         expect( texasjdl.name ).to eq('texasjdl')
       end
 
+      it 'throws an ArgumentError when being passed a number' do
+        expect{ Bgg::User.find_by_name(111) }.to raise_error(ArgumentError, 'find_by_name must be passed a string!')
+      end
+
       it 'throws an ArgumentError for a user who does not exist' do
         response_file = 'sample_data/user?name=yyyyyyy'
         request_url = 'http://www.boardgamegeek.com/xmlapi2/user'

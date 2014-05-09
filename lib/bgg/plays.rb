@@ -15,12 +15,5 @@ module Bgg
 
 			iterator.nil? ? nil : iterator
 		end
-
-		def self.find_by_id(game_id)
-			game_id = Integer(game_id)
-			if game_id < 1
-				raise ArgumentError.new('game_id must be greater than 0!')
-			end
-		end
 	end
 end

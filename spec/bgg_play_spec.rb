@@ -10,7 +10,10 @@ describe Bgg::Play do
                        'incomplete'=>'0',
                        'nowinstats'=>'0',
                        'location'=>'',
-                       'item'=>[{'name'=>'Cheeky Monkey', 'objecttype'=>'thing', 'objectid'=>'29773', 'subtypes'=>[{'subtype'=>[{'value'=>'boardgame'}]}]}]} }
+                       'item'=>[ { 'name'=>'Cheeky Monkey',
+                           'objecttype'=>'thing',
+                           'objectid'=>'29773',
+                           'subtypes'=>[{'subtype'=>[{'value'=>'boardgame'}]}]}]} }
 
     let(:item) { Bgg::Play.new(item_data) }
 
