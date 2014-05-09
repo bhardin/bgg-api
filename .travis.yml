@@ -3,4 +3,8 @@ rvm:
   - "1.9.3"
   - "2.0.0"
 before_script: 'bundle'
-script: 'CODECLIMATE_REPO_TOKEN=187555d2e125f5add7c7150d4e529f7f872510808a16aaad4a62e5cc1c1eb53c bundle exec rake'
+script: 'bundle exec rake'
+addons:
+  code_climate:
+    repo_token:
+      secure: "ZuiGL4BXCGNiKZlA5o0DHiN8Kq2DZAcV6yycRnDlynGuF7MOKdnDq/Er7z+AT4ld0AteRgB3gNzzIZSqRzKLDA0qP8OT9N4Mo/vcgjqR7HtbfWrUQAvr2ICmsohFWVu0FTg82TMyj2T2nCb9zqSFzBIS/JT/XPb+OLLliviBP/E="
