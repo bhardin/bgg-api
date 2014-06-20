@@ -43,6 +43,8 @@ end
 
 require 'bgg/request/base'
 
+require 'bgg/result/base'
+
 require 'bgg/collection'
 require 'bgg/collection_item'
 require 'bgg/game'
