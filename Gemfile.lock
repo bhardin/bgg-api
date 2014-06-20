@@ -70,6 +70,7 @@ DEPENDENCIES
   codeclimate-test-reporter (~> 0.3.0)
   httparty (~> 0.8.3)
   jeweler (~> 2.0.1)
+  nokogiri (~> 1.6.1)
   rake (~> 10.1.0)
   rdoc (~> 3.12)
   rspec (~> 2.11.0)
