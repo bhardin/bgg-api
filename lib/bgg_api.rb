@@ -44,6 +44,7 @@ end
 require 'bgg/request/base'
 
 require 'bgg/result/base'
+require 'bgg/result/enumerable'
 
 require 'bgg/collection'
 require 'bgg/collection_item'
