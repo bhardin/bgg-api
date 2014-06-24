@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Bgg::Result::Item do
   let(:item_xml) { Nokogiri.XML(xml_string) }
   let(:xml_string) { '<items><item/></items>' }
-  let(:request) { double('Bgg::Request::Item') }
+  let(:request) { double('Bgg::Request::Base') }
 
   subject { Bgg::Result::Item.new item_xml.at_xpath('items/item'), request }
 

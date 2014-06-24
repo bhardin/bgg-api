@@ -3,7 +3,7 @@ require 'spec_helper'
 module Bgg
   module Result
     class Enumerable
-      class Item < Base
+      class Item < Item
       end
     end
   end

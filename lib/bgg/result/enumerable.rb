@@ -1,6 +1,6 @@
 module Bgg
   module Result
-    class Enumerable < Base
+    class Enumerable < Item
       include ::Enumerable
 
       def initialize(xml, request)
