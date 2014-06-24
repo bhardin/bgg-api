@@ -43,7 +43,7 @@ end
 
 require 'bgg/request/base'
 
-require 'bgg/result/base'
+require 'bgg/result/item'
 require 'bgg/result/enumerable'
 
 require 'bgg/collection'
