@@ -40,18 +40,135 @@ There are object types and subtypes for many of the APIs documented at
 Everything around a user and their game collection should work, as well
 as generalized searching for board games.
 
-### Example
+### Requesting Data
 
-Most of the documentation right now is in the specs. I will work on
-beefing this section up shortly.
+There are a few ways to request data from the api.
+
+#### Simple requests
+
+BggApi is the root entry point to the different api calls.
 
 ```ruby
-texasjdl = Bgg::User.find_by_id(39488)
-texasjdl.collection.played.each do |item|
-  puts "#{item.name} is #{item.owned? ? '' : 'not'} owned."
-end
+BggApi.collection 'texasjdl' # Default call 
+BggApi.collection('texasjdl', { brief: 1 }) # Adding params based on api documentation
 ```
 
+#### Predefined requests
+
+These are here to make it so you do not need to know the bgg xml api. To
+get the same as above.
+
+```ruby
+Bgg::Request::Collection.board_games('username').brief.get
+Bgg::Request::Collection.board_games('username', { brief: 1 }).get # You can still pass params here if you want
+```
+
+#### The long way
+
+If you would like to pass around the request objects, this is a longer
+method to do so.
+
+```ruby
+my_request = Bgg::Request::Collection.new('username')
+my_request.add_params({ brief: 1 })
+my_collection = my_request.get
+```
+
+### Working with Results
+
+Each api method has it's own data structure, although there is some
+common themes.
+
+There is a possibilty that there may be data for
+one item and not another if the original bgg record is missing it.  For
+instance a user has not rated an item in their collection.  In these
+cases we return nil.
+
+Another possible reason to get nil is if you pull a data item from the
+result set when there is a needed request param.  For example, to get
+the user_rating for a collection item you need to specify stats: 1, or
+all_fields.
+
+#### Enumerated Objects
+
+Most results return an enumerated root object (Although not all).
+The child object will always inherit from Bgg::Result::Item.
+
+```ruby
+my_collection.count
+my_collection.first.user_rating  # Returns a collection item object
+```
+
+#### Custom methods
+
+Weather or not they are enumerated all have their own attributes and/or methods.
+
+```ruby
+my_collection.played # Returns array of played items
+```
+
+#### XML always available
+
+Sometimes it is easier to pull out what you want specifically then
+to try and get only what the objects provide.  So if you need it
+the XML is always available at any level.  Since we are using Nokogiri
+this will enable it's methods and return values to you.
+
+```ruby
+my_collection.xml.xpath('items/item/stats/@minplayers') # All items minimum number of players
+my_collection.first.xml.xpath('stats/ranks/rank/@value') # All rankings for an item
+```
+
+### Collection
+
+Objects for collection
+
+#### Bgg::Request::Collection
+
+```ruby
+request = Bgg::Request::Collection.board_games('username', { params: hash })
+request = Bgg::Request::Collection.board_game_expansions('username', { params: hash })
+request = Bgg::Request::Collection.rpgs('username', { params: hash })
+request = Bgg::Request::Collection.video_games('username', { params: hash })
+request.all_fields # Adds params to the bgg call that will request all data possible, returns self
+request.brief # Adds params to the bgg call that will request a smaller subset of data, returns self
+request.add_params( { params: to_add } ) # Adds params to the bgg call
+result = request.get # Execute bgg call and return result
+```
+
+#### Bgg::Result::Collection
+
+These might return nil if missing data or request params.  See [Working with Results](#working-with-results)
+
+* Methods
+  * owned  # items marked as owned
+  * played  # items that have at least one play
+  * user_rated  # items that have a user_rating
+  * user_rated 5  # items that have a value of 5 (with decimal places dropped) 
+  * user_rated 3..5  # items that are between 3 and 5 (with decimal places dropped) 
+
+#### Bgg::Result::Collection::Item
+
+These might return nil if missing data or request params.  See [Working with Results](#working-with-results)
+
+* Attributes
+  * Array: theme_ranks (array of Rank objects)
+  * Floats: average_rating, bgg_rating, user_rating
+  * Integers: collection_id, id, own_count, play_count, play_time, type_rank, year_published
+  * Range: players (minimum..maximum players)
+  * Strings: comment, image, name, thumbnail, type
+  * Time: last_modified
+* Methods
+  * Booleans: for_trade?, owned?, played?, preordered?, published?,
+    wanted? want_to_buy?, want_to_play?
+
+#### Bgg::Result::Collection::Item::Rank
+
+These might return nil if missing data or request params.  See [Working with Results](#working-with-results)
+* Attributes
+  * Float: rating
+  * Integers: id (ID of theme), rank
+  * String: title (Title of theme)
 
 Contributing to bgg
 -----------------------
