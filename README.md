@@ -49,8 +49,8 @@ There are a few ways to request data from the api.
 BggApi is the root entry point to the different api calls.
 
 ```ruby
-BggApi.collection 'texasjdl' # Default call 
-BggApi.collection('texasjdl', { brief: 1 }) # Adding params based on api documentation
+BggApi.collection 'username' # Default call 
+BggApi.collection('username', { brief: 1 }) # Adding params based on api documentation
 ```
 
 #### Predefined requests
@@ -141,11 +141,11 @@ result = request.get # Execute bgg call and return result
 These might return nil if missing data or request params.  See [Working with Results](#working-with-results)
 
 * Methods
-  * owned  # items marked as owned
-  * played  # items that have at least one play
-  * user_rated  # items that have a user_rating
-  * user_rated 5  # items that have a value of 5 (with decimal places dropped) 
-  * user_rated 3..5  # items that are between 3 and 5 (with decimal places dropped) 
+  * owned, items marked as owned
+  * played, items that have at least one play
+  * user_rated, items that have a user_rating
+  * user_rated 5, items that have a value of 5 (with decimal places dropped) 
+  * user_rated 3..5, items that are between 3 and 5 (with decimal places dropped) 
 
 #### Bgg::Result::Collection::Item
 
@@ -164,7 +164,6 @@ These might return nil if missing data or request params.  See [Working with Res
 
 #### Bgg::Result::Collection::Item::Rank
 
-These might return nil if missing data or request params.  See [Working with Results](#working-with-results)
 * Attributes
   * Float: rating
   * Integers: id (ID of theme), rank
