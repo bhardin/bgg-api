@@ -46,6 +46,7 @@ require 'bgg/request/base'
 require 'bgg/result/item'
 require 'bgg/result/enumerable'
 
+require 'bgg/result/collection'
 require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
 
