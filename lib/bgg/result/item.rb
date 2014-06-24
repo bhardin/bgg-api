@@ -1,6 +1,6 @@
 module Bgg
   module Result
-    class Base
+    class Item
 
       attr_reader :request, :xml
 
