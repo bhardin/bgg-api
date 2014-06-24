@@ -84,13 +84,12 @@ describe Bgg::User do
         it 'returns the collection object representing the collection for the user' do
           stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/collection').
             with(query: {username: 'texasjdl'}).
-            to_return(body: File.open('sample_data/collection?username=texasjdl'), status: 200)
+            to_return(body: '<?xml version="1.0" encoding="utf-8"?><items><item/><items>',status: 200)
 
           collection = texasjdl.collection
 
-          expect( collection ).to be_instance_of(Bgg::Collection)
-          expect( collection.owned.first ).to be_instance_of(Bgg::Collection::Item)
-          expect( collection.size ).to eq(604)
+          expect( collection ).to be_instance_of(Bgg::Result::Collection)
+          expect( collection.first ).to be_instance_of(Bgg::Result::Collection::Item)
         end
       end
 

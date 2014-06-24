@@ -62,17 +62,15 @@ describe 'BggApi basic API calls' do
     end
 
     describe 'BGG Collection' do
-      let(:query) { {own: '1', username: 'texasjdl', type: 'boardgame'} }
+      let(:username) { 'texasjdl' }
+      let(:params) { {own: '1', type: 'boardgame'} }
+      let(:query) { params.merge({ username: username }) }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/collection' }
-      let(:response_file) { 'sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
 
-      subject(:results) { BggApi.collection(query) }
+      subject { BggApi.collection username, params }
 
-      it { should_not be_nil }
-
-      it 'retrieves the correct id' do
-        results['item'][0]['objectid'].should == '421'
-      end
+      it { expect( subject ).to be_instance_of Bgg::Result::Collection }
     end
 
     describe 'BGG Hot Items' do

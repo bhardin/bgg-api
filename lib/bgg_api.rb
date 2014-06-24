@@ -1,13 +1,10 @@
 require 'httparty'
 require 'xmlsimple'
 
-# http://boardgamegeek.com/wiki/page/BGG_XML_API2#
-
 class BggApi
   include HTTParty
 
-  METHODS = [
-    :collection,
+  OLD_METHODS = [
     :family,
     :forum,
     :forumlist,
@@ -17,13 +14,16 @@ class BggApi
     :search,
     :thing,
     :thread,
-    :user,
+    :user
+  ].freeze
+
+  NEW_METHODS = [
+    :collection
   ].freeze
 
   BASE_URI = 'http://www.boardgamegeek.com/xmlapi2'
-  OLD_URI  = 'http://www.boardgamegeek.com/xmlapi'
 
-  METHODS.each do |method|
+  OLD_METHODS.each do |method|
     define_singleton_method(method) do |params|
       params ||= {}
 
@@ -36,6 +36,13 @@ class BggApi
       else
         raise "Received a #{response.code} at #{url} with #{params}"
       end
+    end
+  end
+
+  NEW_METHODS.each do |method|
+    define_singleton_method method do |*params|
+      request = Object.const_get("Bgg").const_get("Request").const_get(method.to_s.capitalize).new *params
+      request.get
     end
   end
 end
@@ -53,7 +60,6 @@ require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
 
 
-require 'bgg/collection'
 require 'bgg/game'
 require 'bgg/play'
 require 'bgg/plays'

@@ -50,7 +50,7 @@ module Bgg
     end
 
     def collection
-      Bgg::Collection.find_by_username(self.name)
+      BggApi.collection(self.name)
     end
 
     def plays
