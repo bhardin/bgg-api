@@ -17,6 +17,8 @@ describe Bgg::Result::Collection do
     request.stub(:params).and_return( { username: 'username' } )
   end
 
+  it { expect( subject ).to be_a Bgg::Result::Enumerable }
+
   describe '#owned' do
     let(:item1_data) { '<status own="1"/>' }
     let(:item2_data) { '<status own="0"/>' }

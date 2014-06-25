@@ -11,6 +11,8 @@ describe Bgg::Result::Collection::Item do
     request.stub(:params).and_return( {} )
   end
 
+  it { expect( subject ).to be_a Bgg::Result::Item }
+
   context 'without data' do
     its(:average_rating) { should eq nil }
     its(:bgg_rating)     { should eq nil }

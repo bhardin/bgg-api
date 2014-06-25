@@ -11,6 +11,8 @@ describe Bgg::Result::Collection::Item::Rank do
     request.stub(:params).and_return( {} )
   end
 
+  it { expect( subject ).to be_a Bgg::Result::Item }
+
   context 'without data' do
     its(:id)     { should eq nil }
     its(:rank)   { should eq nil }
