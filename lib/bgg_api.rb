@@ -41,6 +41,11 @@ class BggApi
 end
 
 
+require 'bgg/request/base'
+
+require 'bgg/result/item'
+require 'bgg/result/enumerable'
+
 require 'bgg/collection'
 require 'bgg/collection_item'
 require 'bgg/game'
