@@ -111,8 +111,8 @@ describe Bgg::Result::Collection::Item do
 
       context 'booleans true' do
         let(:status)         { 1 }
-
         its(:for_trade?)     { should eq true }
+
         its(:owned?)         { should eq true }
         its(:preordered?)    { should eq true }
         its(:want_to_buy?)   { should eq true }
@@ -224,6 +224,42 @@ describe Bgg::Result::Collection::Item do
         expect( subject.game ).to be_instance_of(Bgg::Game)
       end
     end
+  end
+
+  context 'with live data' do
+    let(:response_file)  { "sample_data/collection.xml" }
+    let(:xml_string)     { File.open(response_file) }
+
+    before do
+      request.stub(:params).and_return( { stats: 1 } )
+    end
+
+    its(:average_rating) { should_not eq nil }
+    its(:bgg_rating)     { should_not eq nil }
+    its(:collection_id)  { should_not eq nil }
+    its(:comment)        { should_not eq nil }
+    its(:for_trade?)     { should_not eq nil }
+    its(:id)             { should_not eq nil }
+    its(:image)          { should_not eq nil }
+    its(:name)           { should_not eq nil }
+    its(:last_modified)  { should_not eq nil }
+    its(:own_count)      { should_not eq nil }
+    its(:owned?)         { should_not eq nil }
+    its(:play_count)     { should_not eq nil }
+    its(:play_time)      { should_not eq nil }
+    its(:played?)        { should_not eq nil }
+    its(:players)        { should_not eq nil }
+    its(:preordered?)    { should_not eq nil }
+    its(:published?)     { should_not eq nil }
+    its(:theme_ranks)    { should_not eq nil }
+    its(:thumbnail)      { should_not eq nil }
+    its(:type)           { should_not eq nil }
+    its(:type_rank)      { should_not eq nil }
+    its(:user_rating)    { should_not eq nil }
+    its(:want_to_buy?)   { should_not eq nil }
+    its(:want_to_play?)  { should_not eq nil }
+    its(:wanted?)        { should_not eq nil }
+    its(:year_published) { should_not eq nil }
   end
 
 end
