@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items totalitems="1" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse" pubdate="Mon, 07 Jul 2014 18:20:36 +0000">
+  <item objecttype="thing" objectid="121" subtype="boardgame" collid="15777958">
+    <name sortindex="1">Dune</name>
+    <yearpublished>1979</yearpublished>
+    <image>http://cf.geekdo-images.com/images/pic1305910.jpg</image>
+    <thumbnail>
+      http://cf.geekdo-images.com/images/pic1305910_t.jpg
+    </thumbnail>
+    <stats minplayers="2" maxplayers="6" playingtime="240" numowned="4400">
+      <rating value="10">
+        <usersrated value="3831"/>
+        <average value="7.63275"/>
+        <bayesaverage value="7.32007"/>
+        <stddev value="1.65494"/>
+        <median value="0"/>
+        <ranks>
+          <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="110" bayesaverage="7.32007"/>
+          <rank type="family" id="5496" name="thematic" friendlyname="Thematic Rank" value="21" bayesaverage="7.38464"/>
+          <rank type="family" id="5497" name="strategygames" friendlyname="Strategy Game Rank" value="74" bayesaverage="7.34527"/>
+        </ranks>
+      </rating>
+    </stats>
+    <status own="1" prevowned="0" fortrade="0" want="0" wanttoplay="1" wanttobuy="0" wishlist="0" preordered="0" lastmodified="2014-06-05 10:31:42"/>
+    <numplays>8</numplays>
+    <comment>This is a comment</comment>
+    <conditiontext>Custom, played</conditiontext>
+    <wantpartslist>New unit tokens</wantpartslist>
+    <haspartslist>Spice</haspartslist>
+    <wishlistcomment>Wish List Comment</wishlistcomment>
+  </item>
+</items>
