@@ -169,6 +169,38 @@ These might return nil if missing data or request params.  See [Working with Res
   * Integers: id (ID of theme), rank
   * String: title (Title of theme)
 
+### Search
+
+Objects for search
+
+#### Bgg::Request::Search
+
+```ruby
+request = Bgg::Request::Search.board_games('query', { params: hash })
+request = Bgg::Request::Search.board_game_expansions('query', { params: hash })
+request = Bgg::Request::Search.rpg_issues('query', { params: hash })
+request = Bgg::Request::Search.rpg_items('query', { params: hash })
+request = Bgg::Request::Search.rpg_periodicals('query', { params: hash })
+request = Bgg::Request::Search.rpgs('query', { params: hash })
+request = Bgg::Request::Search.video_games('query', { params: hash })
+request.exact # Adds params to the bgg call that will request an exact match only, returns self
+request.add_params( { params: to_add } ) # Adds params to the bgg call
+result = request.get # Execute bgg call and return result
+```
+
+#### Bgg::Result::Search
+
+* Methods
+  * Select item type from result set:  board_games, board_game_expansions, rpg_issues, rpg_items, rpg_periodicals, rpgs, video_games
+
+#### Bgg::Result::Search::Item
+
+* Attributes
+  * Integers: id, year_published
+  * Stings: name, type
+* Methods
+  * game, request game based on id
+
 Contributing to bgg
 -----------------------
 
