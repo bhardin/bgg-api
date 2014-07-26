@@ -56,6 +56,7 @@ require 'bgg/result/enumerable'
 require 'bgg/result/collection'
 require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
+require 'bgg/result/search'
 require 'bgg/result/search_item'
 
 require 'bgg/game'
