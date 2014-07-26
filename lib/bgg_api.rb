@@ -50,6 +50,7 @@ end
 
 require 'bgg/request/base'
 require 'bgg/request/collection'
+require 'bgg/request/search'
 
 require 'bgg/result/item'
 require 'bgg/result/enumerable'
