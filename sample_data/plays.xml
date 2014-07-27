@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plays username="craineum" userid="477630" total="7" page="1" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+  <play id="7622070" date="2012-06-09" quantity="2" length="0" incomplete="0" nowinstats="0" location="Home, Portsmouth, NH">
+    <item name="Dune" objecttype="thing" objectid="121">
+      <subtypes>
+        <subtype value="boardgame"/>
+      </subtypes>
+    </item>
+    <comments>Jeremy: Kevin the "King Maker"</comments>
+    <players>
+      <player username="craineum" userid="477630" name="Me" startposition="" color="" score="0" new="0" rating="0" win="0"/>
+      <player username="" userid="0" name="Jeremy" startposition="" color="" score="1" new="1" rating="0" win="1"/>
+      <player username="SnakeBelly" userid="121971" name="Mark" startposition="" color="" score="0" new="0" rating="0" win="0"/>
+      <player username="" userid="0" name="Bryce" startposition="" color="" score="0" new="1" rating="0" win="0"/>
+      <player username="" userid="0" name="Amanda" startposition="" color="" score="1" new="1" rating="0" win="1"/>
+      <player username="" userid="0" name="Chancellor" startposition="" color="" score="0" new="1" rating="0" win="0"/>
+    </players>
+  </play>
+</plays>

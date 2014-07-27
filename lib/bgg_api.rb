@@ -60,6 +60,7 @@ require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
 require 'bgg/result/hot'
 require 'bgg/result/hot_item'
+require 'bgg/result/plays_play'
 require 'bgg/result/search'
 require 'bgg/result/search_item'
 
