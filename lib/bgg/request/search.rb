@@ -2,13 +2,13 @@ module Bgg
   module Request
     class Search < Base
 
-      BOARD_GAMES = { type: "boardgame" }
-      BOARD_GAME_EXPANSIONS = { type: "boardgameexpansion" }
-      RPG_ISSUES = { type: "rpgissue" }
-      RPG_ITEMS = { type: "rpgitem" }
-      RPG_PERIODICALS = { type: "rpgperiodical" }
-      RPGS = { type: "rpg" }
-      VIDEO_GAMES = { type: "videogame" }
+      BOARD_GAMES = { type: 'boardgame' }
+      BOARD_GAME_EXPANSIONS = { type: 'boardgameexpansion' }
+      RPG_ISSUES = { type: 'rpgissue' }
+      RPG_ITEMS = { type: 'rpgitem' }
+      RPG_PERIODICALS = { type: 'rpgperiodical' }
+      RPGS = { type: 'rpg' }
+      VIDEO_GAMES = { type: 'videogame' }
 
       EXACT = { exact: 1 }
 
@@ -42,7 +42,7 @@ module Bgg
 
       def initialize(query, params = {})
         if query.nil? || query.empty?
-          raise ArgumentError.new "missing required query"
+          raise ArgumentError.new 'missing required query'
         else
           params[:query] = query
         end

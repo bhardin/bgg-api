@@ -7,10 +7,10 @@ module Bgg
         def initialize(item, request)
           super item, request
 
-          @id = xpath_value_int "@id"
-          @name = xpath_value "name/@value"
-          @type = xpath_value "@type"
-          @year_published = xpath_value_int "yearpublished/@value"
+          @id = xpath_value_int '@id'
+          @name = xpath_value 'name/@value'
+          @type = xpath_value '@type'
+          @year_published = xpath_value_int 'yearpublished/@value'
         end
 
         def game
