@@ -9,7 +9,6 @@ class BggApi
     :forum,
     :forumlist,
     :guild,
-    :plays,
     :thing,
     :thread,
     :user
@@ -18,6 +17,7 @@ class BggApi
   NEW_METHODS = [
     :collection,
     :hot,
+    :plays,
     :search
   ].freeze
 
