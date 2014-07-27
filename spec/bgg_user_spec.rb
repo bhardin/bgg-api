@@ -63,6 +63,7 @@ describe Bgg::User do
       let(:response_file) { 'sample_data/user?name=texasjdl' }
       let(:request_url)   { 'http://www.boardgamegeek.com/xmlapi2/user' }
       let(:texasjdl)      { Bgg::User.find_by_id(39488) }
+      let(:texasjdl)      { Bgg::User.find_by_id(39488) }
 
       before do
         stub_request(:any, request_url).
@@ -73,10 +74,10 @@ describe Bgg::User do
       describe '.play_count' do
         it 'returns the number of plays when the user has plays' do
           stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/plays').
-            with(query: {username: 'texasjdl', page: 1}).
-            to_return(body: File.open('sample_data/plays?username=texasjdl&page=1'), status: 200)
+            with(query: {username: 'texasjdl'}).
+            to_return(body: File.open('sample_data/plays.xml'), status: 200)
 
-          expect( texasjdl.play_count ).to eq(299)
+          expect( texasjdl.play_count ).to eq(7)
         end
       end
 
@@ -94,21 +95,19 @@ describe Bgg::User do
       end
 
       describe '.plays' do
-        it 'returns a Bgg::PlaysIterator' do
-          [1,2,3].each do |i|
-            stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/plays').
-              with(query: {username: 'texasjdl', page: i}).
-              to_return(body: File.open("sample_data/plays?username=texasjdl&page=#{i}"), status: 200)
-          end
+        it 'returns a Bgg::Result::Plays' do
+          stub_request(:any, 'http://www.boardgamegeek.com/xmlapi2/plays').
+            with(query: {username: 'texasjdl'}).
+            to_return(body: File.open("sample_data/plays.xml"), status: 200)
 
           plays = texasjdl.plays
           first_play = plays.first
 
-          expect( plays ).to be_an_instance_of(Bgg::Plays::Iterator)
-          expect( first_play ).to be_an_instance_of(Bgg::Play)
-          expect( first_play.game_name ).to eq('Fauna')
-          expect( first_play.players.size ).to eq(5)
-          expect( first_play.players.first.name ).to eq('Ted')
+          expect( plays ).to be_instance_of(Bgg::Result::Plays)
+          expect( first_play ).to be_instance_of(Bgg::Result::Plays::Play)
+          expect( first_play.name ).to eq('Dune')
+          expect( first_play.players.size ).to eq(6)
+          expect( first_play.players.first.name ).to eq('Me')
         end
       end
     end

@@ -45,8 +45,8 @@ module Bgg
     end
 
     def play_count
-      some_plays = BggApi.plays({username: self.name, page: 1})
-      some_plays.fetch('total', 0).to_i
+      some_plays = BggApi.plays(self.name, nil)
+      some_plays.total_count
     end
 
     def collection
@@ -54,7 +54,7 @@ module Bgg
     end
 
     def plays
-      Bgg::Plays.find_by_username(self.name)
+      BggApi.plays(self.name, nil)
     end
   end
 end
