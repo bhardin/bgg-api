@@ -65,8 +65,5 @@ require 'bgg/result/search'
 require 'bgg/result/search_item'
 
 require 'bgg/game'
-require 'bgg/play'
-require 'bgg/plays'
-require 'bgg/plays_iterator'
 require 'bgg/user'
 
