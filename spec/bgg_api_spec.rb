@@ -10,9 +10,8 @@ describe 'BggApi basic API calls' do
   end
 
   context 'when non-200 responses' do
-    let(:expected_response) { File.open(response_file) }
     let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
-    let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
+    let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
 
     before do
       stub_request(:any, request_url)
@@ -38,13 +37,15 @@ describe 'BggApi basic API calls' do
     end
 
     describe 'BGG Search' do
-      let(:query) { {query: 'Burgund', type: 'boardgame'} }
+      let(:search) { 'Marvel' }
+      let(:params) { { query: search } }
+      let(:query) { params }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
-      let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
 
-      subject(:results) { BggApi.search(query) }
+      subject { BggApi.search search }
 
-      it { should_not be_nil }
+      it { expect( subject ).to be_instance_of Bgg::Result::Search }
     end
 
     describe 'BGG Thing' do
