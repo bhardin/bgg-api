@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Bgg::Result::Hot do
   let(:request) { double('Bgg::Request::Hot') }
-  let(:xml_string) { "<items><item id='1'></item><item id='2'></item></items>" }
+  let(:xml_string) { '<items><item id="1"></item><item id="2"></item></items>' }
   let(:params) { {} }
   subject { Bgg::Result::Hot.new(Nokogiri.XML(xml_string), request) }
 

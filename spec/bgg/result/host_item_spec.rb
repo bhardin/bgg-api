@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Bgg::Result::Hot::Item do
   let(:item_xml) { Nokogiri.XML(xml_string) }
-  let(:xml_string) { "<items><item/></items>" }
+  let(:xml_string) { '<items><item/></items>' }
   let(:request) { double('Bgg::Request::Hot') }
   let(:params) { {} }
 
-  subject { Bgg::Result::Hot::Item.new(item_xml.at_xpath("items/item"), request) }
+  subject { Bgg::Result::Hot::Item.new(item_xml.at_xpath('items/item'), request) }
 
   before do
     request.stub(:params).and_return( params )
@@ -65,7 +65,7 @@ describe Bgg::Result::Hot::Item do
   end
 
   context 'with live data' do
-    let(:response_file)  { "sample_data/hot.xml" }
+    let(:response_file)  { 'sample_data/hot.xml' }
     let(:xml_string)     { File.open response_file }
 
     its(:id)             { should_not eq nil }

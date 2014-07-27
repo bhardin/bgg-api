@@ -8,11 +8,11 @@ module Bgg
           super item, request
           @type = request_params[:type] || 'boardgame'
 
-          @id = xpath_value_int "@id"
-          @name = xpath_value "name/@value"
-          @rank = xpath_value_int "@rank"
-          @thumbnail = xpath_value "thumbnail/@value"
-          @year_published = xpath_value_int "yearpublished/@value"
+          @id = xpath_value_int '@id'
+          @name = xpath_value 'name/@value'
+          @rank = xpath_value_int '@rank'
+          @thumbnail = xpath_value 'thumbnail/@value'
+          @year_published = xpath_value_int 'yearpublished/@value'
         end
 
         def game
