@@ -227,7 +227,7 @@ describe Bgg::Result::Collection::Item do
   end
 
   context 'with live data' do
-    let(:response_file)  { "sample_data/collection.xml" }
+    let(:response_file)  { 'sample_data/collection.xml' }
     let(:xml_string)     { File.open(response_file) }
 
     before do
