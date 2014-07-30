@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Bgg::Request::Search do
   let(:with) { { query: { query: query  } } }
   let(:query) { 'abc' }
-  let(:request_url) { "http://www.boardgamegeek.com/xmlapi2/search" }
+  let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
   let(:response_body) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
 
   subject { Bgg::Request::Search.new query }
@@ -30,56 +30,56 @@ describe Bgg::Request::Search do
       expect( subject.get ).to be_instance_of Bgg::Result::Search
     end
 
-    describe ".board_games" do
-      let(:with) { { query: { query: query, type: "boardgame" } } }
+    describe '.board_games' do
+      let(:with) { { query: { query: query, type: 'boardgame' } } }
 
       subject { Bgg::Request::Search.board_games query }
 
       it { class_method_helper }
     end
 
-    describe ".board_game_expansions" do
-      let(:with) { { query: { query: query, type: "boardgameexpansion" } } }
+    describe '.board_game_expansions' do
+      let(:with) { { query: { query: query, type: 'boardgameexpansion' } } }
 
       subject { Bgg::Request::Search.board_game_expansions query }
 
       it { class_method_helper }
     end
 
-    describe ".rpg_issues" do
-      let(:with) { { query: { query: query, type: "rpgissue" } } }
+    describe '.rpg_issues' do
+      let(:with) { { query: { query: query, type: 'rpgissue' } } }
 
       subject { Bgg::Request::Search.rpg_issues query }
 
       it { class_method_helper }
     end
 
-    describe ".rpg_items" do
-      let(:with) { { query: { query: query, type: "rpgitem" } } }
+    describe '.rpg_items' do
+      let(:with) { { query: { query: query, type: 'rpgitem' } } }
 
       subject { Bgg::Request::Search.rpg_items query }
 
       it { class_method_helper }
     end
 
-    describe ".rpg_periodicals" do
-      let(:with) { { query: { query: query, type: "rpgperiodical" } } }
+    describe '.rpg_periodicals' do
+      let(:with) { { query: { query: query, type: 'rpgperiodical' } } }
 
       subject { Bgg::Request::Search.rpg_periodicals query }
 
       it { class_method_helper }
     end
 
-    describe ".rpgs" do
-      let(:with) { { query: { query: query, type: "rpg" } } }
+    describe '.rpgs' do
+      let(:with) { { query: { query: query, type: 'rpg' } } }
 
       subject { Bgg::Request::Search.rpgs query }
 
       it { class_method_helper }
     end
 
-    describe ".video_games" do
-      let(:with) { { query: { query: query, type: "videogame" } } }
+    describe '.video_games' do
+      let(:with) { { query: { query: query, type: 'videogame' } } }
 
       subject { Bgg::Request::Search.video_games query }
 
@@ -87,7 +87,7 @@ describe Bgg::Request::Search do
     end
   end
 
-  describe "#exact" do
+  describe '#exact' do
     let(:with) { { query: { query: query, exact: 1 } } }
 
     it do

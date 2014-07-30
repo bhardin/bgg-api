@@ -9,7 +9,6 @@ class BggApi
     :forum,
     :forumlist,
     :guild,
-    :hot,
     :plays,
     :thing,
     :thread,
@@ -18,6 +17,7 @@ class BggApi
 
   NEW_METHODS = [
     :collection,
+    :hot,
     :search
   ].freeze
 
@@ -50,6 +50,7 @@ end
 
 require 'bgg/request/base'
 require 'bgg/request/collection'
+require 'bgg/request/hot'
 require 'bgg/request/search'
 
 require 'bgg/result/item'
@@ -57,6 +58,8 @@ require 'bgg/result/enumerable'
 require 'bgg/result/collection'
 require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
+require 'bgg/result/hot'
+require 'bgg/result/hot_item'
 require 'bgg/result/search'
 require 'bgg/result/search_item'
 
