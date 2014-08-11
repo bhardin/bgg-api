@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guild id="1551" name="The Seacoast Game Table" created="Mon, 11 Feb 2013 18:12:07 +0000" termsofuse="http://boardgamegeek.com/xmlapi/termsofuse">
+  <category>group</category>
+  <website>http://www.meetup.com/TheSeacoastGameTable/</website>
+  <manager>craineum</manager>
+  <description>
+    The Game Table is a group for people who enjoy playing euro/designer games in the Seacoast, NH area. The purpose of this group is to get people together and put games on the table on a regular basis. If you enjoy boardgames for the experience, this is the group for you.<br/><br/>When you join this group, you will not only have access to prearranged meetups but will also have the ability to suggest your own gatherings. Enjoy!
+  </description>
+  <location>
+    <addr1/>
+    <addr2/>
+    <city>Portsmouth</city>
+    <stateorprovince>New Hampshire</stateorprovince>
+    <postalcode>03801</postalcode>
+    <country>United States</country>
+  </location>
+  <members count="12" page="1">
+    <member name="Chili1121" date="Mon, 25 Feb 2013 12:09:24 +0000"/>
+    <member name="Cornbreadx" date="Mon, 11 Feb 2013 21:04:13 +0000"/>
+    <member name="craineum" date="Mon, 11 Feb 2013 18:12:07 +0000"/>
+    <member name="dayn_the_mad" date="Wed, 13 Feb 2013 21:19:51 +0000"/>
+    <member name="eisenhornfling" date="Thu, 14 Feb 2013 12:31:43 +0000"/>
+    <member name="frenchsm" date="Tue, 12 Feb 2013 19:23:01 +0000"/>
+    <member name="MRSA_Major" date="Thu, 17 Apr 2014 00:25:46 +0000"/>
+    <member name="rhiochs" date="Mon, 11 Feb 2013 20:27:21 +0000"/>
+    <member name="Seabear2000" date="Wed, 27 Feb 2013 18:11:53 +0000"/>
+    <member name="SnakeBelly" date="Mon, 11 Feb 2013 21:48:48 +0000"/>
+    <member name="Sparkles" date="Tue, 12 Feb 2013 18:40:33 +0000"/>
+    <member name="toadflax" date="Tue, 15 Apr 2014 00:31:43 +0000"/>
+  </members>
+</guild>
