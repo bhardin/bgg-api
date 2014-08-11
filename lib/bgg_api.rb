@@ -50,6 +50,7 @@ end
 
 require 'bgg/request/base'
 require 'bgg/request/collection'
+require 'bgg/request/guild'
 require 'bgg/request/hot'
 require 'bgg/request/plays'
 require 'bgg/request/search'
