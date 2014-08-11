@@ -48,6 +48,18 @@ describe 'BggApi basic API calls' do
       it { expect( subject ).to be_instance_of Bgg::Result::Collection }
     end
 
+    describe 'BGG Guild' do
+      let(:id) { 1234 }
+      let(:params) { { page: 2 } }
+      let(:query) { params.merge({ id: id, members: 1 }) }
+      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/guild' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><guild></guild>' }
+
+      subject { BggApi.guild id, params }
+
+      it { expect( subject ).to be_instance_of Bgg::Result::Guild }
+    end
+
     describe 'BGG Hot Items' do
       let(:query) { {type: 'boardgame'} }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/hot' }
