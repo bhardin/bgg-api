@@ -202,6 +202,63 @@ result = request.get # Execute bgg call and return result
 * Methods
   * game - request game based on id
 
+### Plays
+
+Objects for plays are a little deep.  Plays has a play and a play has players and players have a player.
+
+#### Bgg::Request::Plays
+Must have either username or thing id present, or both
+
+```ruby
+request = Bgg::Request::Plays.board_game_expansions 'username', 1234 #Thing ID
+request = Bgg::Request::Plays.board_game_implementations 'username', nil
+request = Bgg::Request::Plays.board_games nil, 1234 #Thing ID
+request = Bgg::Request::Plays.rpgs 'username', nil
+request = Bgg::Request::Plays.video_games 'username', nil, { params: hash }
+request = Bgg::Request::Plays.new( 'username', nil, { type: 'boardgame' } ) # Instead of using built in method
+request.date Date.parse('01-01-2001)  # Adds a date to restrict to
+request.date Range  # Can be a date range as well
+request.page 2 # Restricts to which page to pull back, pages are limited to 100 items
+result = request.get # Execute bgg call and return result
+```
+
+#### Bgg::Result::Plays
+
+* Attributes
+  * Integers: page, thing_id, total_count
+  * Strings: username
+* Methods
+  * find_by_date - search current results page for date or date range
+  * find_by_location - search current results page for location
+  * find_by_thing_id - search current results page for thing_id
+  * find_by_thing_name - search current results page for thing_name
+  * board_game_expansions - search current results page for board game expansions
+  * board_game_implementations
+  * board_games
+  * rpg_items
+  * video_games
+
+#### Bgg::Result::Plays::Play
+
+* Attributes
+  * Array: types
+  * Dates: date
+  * Integers: id, length, quantity
+  * Stings: comment, location, name
+* Methods
+  * Booleans: now_in_stats?, incomplete?
+  * type - first subtype
+  * game - request game based on id
+  * players - enumerable of all the players
+
+#### Bgg::Result::Plays::Play::Player
+* Attributes
+  * Float: rating
+  * Integer: id, score
+  * String: color, name, start_position, username
+* Methods
+  * Booleans: new?, winner?
+
 ### Search
 
 Objects for search

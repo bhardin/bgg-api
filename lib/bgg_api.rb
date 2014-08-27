@@ -9,7 +9,6 @@ class BggApi
     :forum,
     :forumlist,
     :guild,
-    :plays,
     :thing,
     :thread,
     :user
@@ -18,6 +17,7 @@ class BggApi
   NEW_METHODS = [
     :collection,
     :hot,
+    :plays,
     :search
   ].freeze
 
@@ -41,7 +41,7 @@ class BggApi
 
   NEW_METHODS.each do |method|
     define_singleton_method method do |*params|
-      request = Object.const_get("Bgg").const_get("Request").const_get(method.to_s.capitalize).new *params
+      request = Object.const_get('Bgg').const_get('Request').const_get(method.to_s.capitalize).new *params
       request.get
     end
   end
@@ -51,6 +51,7 @@ end
 require 'bgg/request/base'
 require 'bgg/request/collection'
 require 'bgg/request/hot'
+require 'bgg/request/plays'
 require 'bgg/request/search'
 
 require 'bgg/result/item'
@@ -60,12 +61,11 @@ require 'bgg/result/collection_item'
 require 'bgg/result/collection_item_rank'
 require 'bgg/result/hot'
 require 'bgg/result/hot_item'
+require 'bgg/result/plays'
+require 'bgg/result/plays_play'
 require 'bgg/result/search'
 require 'bgg/result/search_item'
 
 require 'bgg/game'
-require 'bgg/play'
-require 'bgg/plays'
-require 'bgg/plays_iterator'
 require 'bgg/user'
 
