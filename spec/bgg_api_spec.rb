@@ -1,13 +1,29 @@
 require 'spec_helper'
 
 describe 'BggApi basic API calls' do
-  let(:bgg) { BggApi.new }
-
   context 'when calling an undefined method' do
-    subject { bgg.foo }
+    subject { BggApi.foo }
 
     it 'raises an UndefinedMethodError' do
       expect { subject }.to raise_error(NoMethodError)
+    end
+  end
+
+  context 'when non-200 responses' do
+    let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
+    let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
+
+    before do
+      stub_request(:any, request_url)
+        .with(query: query)
+        .to_return(body: expected_response, status: 500)
+    end
+
+    describe 'BGG Search' do
+      let(:query) { {query: 'Burgund', type: 'boardgame'} }
+      it 'throws an error when non-200 response is received' do
+        expect{BggApi.search(query)}.to raise_error
+      end
     end
   end
 
@@ -16,18 +32,66 @@ describe 'BggApi basic API calls' do
 
     before do
       stub_request(:any, request_url)
-      .with(query: query)
-      .to_return(body: expected_response, status: 200)
+        .with(query: query)
+        .to_return(body: expected_response, status: 200)
+    end
+
+    describe 'BGG Collection' do
+      let(:username) { 'texasjdl' }
+      let(:params) { {own: '1', type: 'boardgame'} }
+      let(:query) { params.merge({ username: username }) }
+      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/collection' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
+
+      subject { BggApi.collection username, params }
+
+      it { expect( subject ).to be_instance_of Bgg::Result::Collection }
+    end
+
+    describe 'BGG Guild' do
+      let(:id) { 1234 }
+      let(:params) { { page: 2 } }
+      let(:query) { params.merge({ id: id, members: 1 }) }
+      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/guild' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><guild></guild>' }
+
+      subject { BggApi.guild id, params }
+
+      it { expect( subject ).to be_instance_of Bgg::Result::Guild }
+    end
+
+    describe 'BGG Hot Items' do
+      let(:query) { {type: 'boardgame'} }
+      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/hot' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/></items>' }
+
+      subject { BggApi.hot query }
+
+      it { expect( subject ).to be_instance_of Bgg::Result::Hot }
+    end
+
+    describe 'BGG Plays' do
+      let(:thing_id) { 84876 }
+      let(:username) { 'texasjd1' }
+      let(:query) { { id: thing_id, username: username } }
+      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/plays' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><plays><play/></plays>' }
+
+      subject(:results) { BggApi.plays username, thing_id }
+
+      it { expect( subject ).to be_instance_of Bgg::Result::Plays }
     end
 
     describe 'BGG Search' do
-      let(:query) { {query: 'Burgund', type: 'boardgame'} }
+      let(:search) { 'Marvel' }
+      let(:params) { { query: search } }
+      let(:query) { params }
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/search' }
-      let(:response_file) { 'sample_data/search?query=Burgund&type=boardgame' }
+      let(:expected_response) { '<?xml version="1.0" encoding="utf-8"?><items><item/><items>' }
 
-      subject(:results) { bgg.search(query) }
+      subject { BggApi.search search }
 
-      it { should_not be_nil }
+      it { expect( subject ).to be_instance_of Bgg::Result::Search }
     end
 
     describe 'BGG Thing' do
@@ -35,54 +99,12 @@ describe 'BggApi basic API calls' do
       let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/thing' }
       let(:response_file) { 'sample_data/thing?id=84876&type=boardgame' }
 
-      subject(:results) { bgg.thing(query) }
+      subject(:results) { BggApi.thing(query) }
 
       it { should_not be_nil }
 
       it 'retrieves the correct id' do
         results['item'][0]['id'].should == '84876'
-      end
-    end
-
-    describe 'BGG Collection' do
-      let(:query) { {own: '1', username: 'texasjdl', type: 'boardgame'} }
-      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/collection' }
-      let(:response_file) { 'sample_data/collection?username=texasjdl&own=1&excludesubtype=boardgameexpansion' }
-
-      subject(:results) { bgg.collection(query) }
-
-      it { should_not be_nil }
-
-      it 'retrieves the correct id' do
-        results['item'][0]['objectid'].should == '421'
-      end
-    end
-
-    describe 'BGG Hot Items' do
-      let(:query) { {type: 'boardgame'} }
-      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/hot' }
-      let(:response_file) { 'sample_data/hot?type=boardgame' }
-
-      subject(:results) { bgg.hot(query) }
-
-      it { should_not be_nil }
-
-      it 'retrieves the correct rank' do
-        results['item'][0]['rank'].should == '1'
-      end
-    end
-
-    describe 'BGG Plays' do
-      let(:query) { {id: '84876', username: 'texasjdl'} }
-      let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/plays' }
-      let(:response_file) { 'sample_data/plays?username=texasjdl&id=84876' }
-
-      subject(:results) { bgg.plays(query) }
-
-      it { should_not be_nil }
-
-      it 'retrieves the correct total' do
-        results['total'].should == '27'
       end
     end
 
@@ -92,7 +114,7 @@ describe 'BggApi basic API calls' do
         let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
         let(:response_file) { 'sample_data/user?name=texasjdl' }
 
-        subject(:results) { bgg.user(query) }
+        subject(:results) { BggApi.user(query) }
 
         it { should_not be_nil }
 
@@ -106,7 +128,7 @@ describe 'BggApi basic API calls' do
         let(:request_url) { 'http://www.boardgamegeek.com/xmlapi2/user' }
         let(:response_file) { 'sample_data/user?name=yyyyyyy' }
 
-        subject(:results) { bgg.user(query) }
+        subject(:results) { BggApi.user(query) }
 
         it { should raise_error }
       end

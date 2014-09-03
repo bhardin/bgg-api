@@ -1,7 +1,11 @@
-bgg-api gem [![Build Status](https://travis-ci.org/bhardin/bgg-api.png?branch=master)](https://travis-ci.org/bhardin/bgg-api) [![Code Climate](https://codeclimate.com/github/bhardin/bgg-api.png)](https://codeclimate.com/github/bhardin/bgg-api)
+bgg gem [![Build Status](https://travis-ci.org/jemiahlee/bgg.svg)](https://travis-ci.org/jemiahlee/bgg) [![Code Climate](https://codeclimate.com/github/jemiahlee/bgg.png)](https://codeclimate.com/github/jemiahlee/bgg)
 ===========
 
-A [boardgamegeek](http://boardgamegeek.com) Ruby wrapper for the [bgg XML Version 2 API](http://boardgamegeek.com/wiki/page/BGG_XML_API2).
+An object-oriented API for interacting with the [boardgamegeek](http://boardgamegeek.com) [XML Version 2 API](http://boardgamegeek.com/wiki/page/BGG_XML_API2).
+
+This is based on a fork of earlier work I had done on
+[bgg-api](http://github.com/bhardin/bgg-api), along with Brett and a few
+other contributors.
 
 ## Versions supported
 
@@ -9,12 +13,13 @@ Please note that this code uses Ruby 1.9 hash syntax and thus does not
 support versions earlier than that.
 
 ## Installing the Gem
-Do the following to install the  [bgg-api gem](http://rubygems.org/gems/bgg-api) Ruby Gem.
+
+Do the following to install the  [bgg gem](http://rubygems.org/gems/bgg) Ruby Gem.
 
 Add the following to your `Gemfile`:
 
 ```ruby
-gem "bgg-api"
+gem "bgg"
 ```
 
 Then run `bundle install` from the command line:
@@ -25,58 +30,78 @@ Then run `bundle install` from the command line:
 
 Require the gem at the top of any file you want to use.
 
-    require 'bgg-api'
+    require 'bgg'
 
 You can either use the low level basic api and then parse the XML document in a way that suits your needs,
 or you can use the specialized methods
 
-## General use
+There are object types and subtypes for many of the APIs documented at
+[BGG_XML_API2](http://boardgamegeek.com/wiki/page/BGG_XML_API2), but not all of them are implemented.
+Everything around a user and their game collection should work, as well
+as generalized searching for board games.
 
-Create an object and all the xml2 api's documented [here](http://boardgamegeek.com/wiki/page/BGG_XML_API2) should work.
+### Requesting Data
 
-### Search Example
+BggApi is the root entry point to the different api calls.
 
-    bgg = BggApi.new
-    bgg.search( {:query => "Acquir", :type => 'boardgame'} )
-    => {"total"=>"2", "termsofuse"=>"http://boardgamegeek.com/xmlapi/termsofuse", "item"=>[{"type"=>"boardgame", "id"=>"5", "name"=>[{"type"=>"primary", "value"=>"Acquire"}], "yearpublished"=>[{"value"=>"1962"}]}, {"type"=>"boardgame", "id"=>"37491", "name"=>[{"type"=>"primary", "value"=>"Modern Land Battles (MLB): Target Acquired"}], "yearpublished"=>[{"value"=>"2010"}]}]}
+```ruby
+BggApi.collection 'username' # Default call 
+BggApi.collection('username', { brief: 1 }) # Adding params based on api documentation
+```
 
-### Thing Example
+### Working with Results
 
-    bgg = BggApi.new
-    bgg.thing({:id => "1"})
-     => {"termsofuse"=>"http://boardgamegeek.com/xmlapi/termsofuse", "item"=>[{"type"=>"boardgame", "id"=>"1", "thumbnail"=>["http://cf.geekdo-images.com/images/pic159509_t.jpg"], "image"=>["http://cf.geekdo-images.com/images/pic159509.jpg"], "name"=>[{"type"=>"primary", "sortindex"=>"5", "value"=>"Die Macher"}], "description"=>["Die Macher is a game about seven sequential political races in different regions of Germany. Players are in charge of national political parties, and must manage limited resources to help their party to victory. The winning party will have the most victory points after all the regional elections. There are four different ways of scoring victory points. First, each regional election can supply one to eighty victory points, depending on the size of the region and how well your party does in it. Second, if a party wins a regional election and has some media influence in the region, then the party will receive some media-control victory points. Third, each party has a national party membership which will grow as the game progresses and this will supply a fair number of victory points. Lastly, parties score some victory points if their party platform matches the national opinions at the end of the game.&#10;&#10;The 1986 edition featured 4 parties from the old West Germany and supported 3-4 players. The 1997 edition supports up to 5 players in the re-united Germany and updated several features of the rules as well.  The 2006 edition also supports up to 5 players and adds a shorter 5 round variant and additional rules updates by the original designer.&#10;&#10;Die Macher is #1 in the Valley Games Classic Line&#10;&#10;"], "yearpublished"=>[{"value"=>"1986"}], "minplayers"=>[{"value"=>"3"}], "maxplayers"=>[{"value"=>"5"}], "poll"=>[{"name"=>"suggested_numplayers", "title"=>"User Suggested Number of Players", "totalvotes"=>"111", "results"=>[{"numplayers"=>"1", "result"=>[{"value"=>"Best", "numvotes"=>"0"}, {"value"=>"Recommended", "numvotes"=>"1"}, {"value"=>"Not Recommended", "numvotes"=>"71"}]}, {"numplayers"=>"2", "result"=>[{"value"=>"Best", "numvotes"=>"0"}, {"value"=>"Recommended", "numvotes"=>"1"}, {"value"=>"Not Recommended", "numvotes"=>"71"}]}, {"numplayers"=>"3", "result"=>[{"value"=>"Best", "numvotes"=>"0"}, {"value"=>"Recommended", "numvotes"=>"23"}, {"value"=>"Not Recommended", "numvotes"=>"62"}]}, {"numplayers"=>"4", "result"=>[{"value"=>"Best", "numvotes"=>"21"}, {"value"=>"Recommended", "numvotes"=>"71"}, {"value"=>"Not Recommended", "numvotes"=>"10"}]}, {"numplayers"=>"5", "result"=>[{"value"=>"Best", "numvotes"=>"96"}, {"value"=>"Recommended", "numvotes"=>"10"}, {"value"=>"Not Recommended", "numvotes"=>"2"}]}, {"numplayers"=>"5+", "result"=>[{"value"=>"Best", "numvotes"=>"0"}, {"value"=>"Recommended", "numvotes"=>"0"}, {"value"=>"Not Recommended", "numvotes"=>"50"}]}]}, {"name"=>"suggested_playerage", "title"=>"User Suggested Player Age", "totalvotes"=>"25", "results"=>[{"result"=>[{"value"=>"2", "numvotes"=>"0"}, {"value"=>"3", "numvotes"=>"0"}, {"value"=>"4", "numvotes"=>"0"}, {"value"=>"5", "numvotes"=>"0"}, {"value"=>"6", "numvotes"=>"0"}, {"value"=>"8", "numvotes"=>"0"}, {"value"=>"10", "numvotes"=>"0"}, {"value"=>"12", "numvotes"=>"5"}, {"value"=>"14", "numvotes"=>"13"}, {"value"=>"16", "numvotes"=>"4"}, {"value"=>"18", "numvotes"=>"2"}, {"value"=>"21 and up", "numvotes"=>"1"}]}]}, {"name"=>"language_dependence", "title"=>"Language Dependence", "totalvotes"=>"43", "results"=>[{"result"=>[{"level"=>"1", "value"=>"No necessary in-game text", "numvotes"=>"33"}, {"level"=>"2", "value"=>"Some necessary text - easily memorized or small crib sheet", "numvotes"=>"4"}, {"level"=>"3", "value"=>"Moderate in-game text - needs crib sheet or paste ups", "numvotes"=>"6"}, {"level"=>"4", "value"=>"Extensive use of text - massive conversion needed to be playable", "numvotes"=>"0"}, {"level"=>"5", "value"=>"Unplayable in another language", "numvotes"=>"0"}]}]}], "playingtime"=>[{"value"=>"240"}], "minage"=>[{"value"=>"14"}], "link"=>[{"type"=>"boardgamecategory", "id"=>"1017", "value"=>"Dice"}, {"type"=>"boardgamecategory", "id"=>"1021", "value"=>"Economic"}, {"type"=>"boardgamecategory", "id"=>"1026", "value"=>"Negotiation"}, {"type"=>"boardgamecategory", "id"=>"1001", "value"=>"Political"}, {"type"=>"boardgamemechanic", "id"=>"2080", "value"=>"Area Control / Area Influence"}, {"type"=>"boardgamemechanic", "id"=>"2012", "value"=>"Auction/Bidding"}, {"type"=>"boardgamemechanic", "id"=>"2072", "value"=>"Dice Rolling"}, {"type"=>"boardgamemechanic", "id"=>"2040", "value"=>"Hand Management"}, {"type"=>"boardgamefamily", "id"=>"10643", "value"=>"Country: Germany"}, {"type"=>"boardgamefamily", "id"=>"91", "value"=>"Valley Games Classic Line"}, {"type"=>"boardgamedesigner", "id"=>"1", "value"=>"Karl-Heinz Schmiel"}, {"type"=>"boardgameartist", "id"=>"12517", "value"=>"Marcus Gschwendtner"}, {"type"=>"boardgamepublisher", "id"=>"133", "value"=>"Hans im Glück Verlags-GmbH"}, {"type"=>"boardgamepublisher", "id"=>"2", "value"=>"Moskito Spiele"}, {"type"=>"boardgamepublisher", "id"=>"5382", "value"=>"Valley Games, Inc."}]}]}
+Each api method has it's own data structure, although there is some
+common themes.
 
-## Specialized methods
+There is a possibilty that there may be data for
+one item and not another if the original bgg record is missing it.  For
+instance a user has not rated an item in their collection.  In these
+cases we return nil.
 
-Specialized usage methods are provided as class methods. At this time, only two such methods exist:
+Another possible reason to get nil is if you pull a data item from the
+result set when there is a needed request param.  For example, to get
+the user_rating for a collection item you need to specify stats: 1, or
+all_fields.
 
-### Search boardgame by id
-Returns ONE simple hash, containing most of the game information (see code for details), in which `:name` is the primary name.
-Alternate names are returned as an array with key `:alternatenames`, which excludes the primary name. Returns nil if nothing is found.
+#### Enumerated Objects
 
-    BggApi.search_boardgame_by_id(53424)
-    => {:id=>53424, :name=>"Metamorphosis Alpha", :minplayers=>{}, :maxplayers=>{}, :age=>{}, :description=>"From the back cover:<br/><br/>&quot;The Metamorphosis Alpha Campaign Book includes:<br/><br/><br/>     A detailed presentation of the starship Warden with role-playing advice on every level for the new game master and experienced player.<br/>     Complete rules for rolling up and playing robot player characters, android player characters, and pure-strain human player characters.<br/>     Well-detailed rules for the use of radiation, poison, and the generation of mutants of all sorts, as well as a detailed creature section with mutants and aliens.<br/>     The sample city level details how anyone can design his own ship levels. The equipment provided will ake fans of science fiction eager to play the game and join in the fun.<br/><br/><br/>", :playingtime=>{}, :thumbnail=>"http://cf.geekdo-images.com/images/pic534654_t.jpg", :image=>"http://cf.geekdo-images.com/images/pic534654.jpg", :alternatenames=>[], :yearpublished=>{}}
+Most results return an enumerated root object (Although not all).
+The child object will always inherit from Bgg::Result::Item.
 
+```ruby
+my_collection.count
+my_collection.first.user_rating  # Returns a collection item object
+my_collection.played # Returns array of played items
+```
 
-###  Search by name
-Returns an array containing the list of all games matching the given name, or nil if none does. This still uses API 1.
+#### XML always available
 
-    BggApi.search_by_name('Burgund')
-     => [{:name=>"The Castles of Burgundy", :type=>"boardgame", :id=>84876}, {:name=>"The Castles of Burgundy: New Player Boards", :type=>"boardgame", :id=>110926}, {:name=>"The Castles of Burgundy: Player Board  – German board game championship 2013", :type=>"boardgame", :id=>139160}, {:name=>"The Castles of Burgundy: The 2nd Expansion", :type=>"boardgame", :id=>132477}, {:name=>"The Castles of Burgundy: The 4th Expansion", :type=>"boardgame", :id=>150083}, {:name=>"Fürsten von Burgund", :type=>"boardgame", :id=>7087}]
+Sometimes it is easier to pull out what you want specifically then
+to try and get only what the objects provide.  So if you need it
+the XML is always available at any level.  Since we are using Nokogiri
+this will enable it's methods and return values to you.
 
-Contributing to bgg-api
+```ruby
+my_collection.xml.xpath('items/item/stats/@minplayers') # All items minimum number of players
+my_collection.first.xml.xpath('stats/ranks/rank/@value') # All rankings for an item
+```
+
+Contributing to bgg
 -----------------------
 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
 * Start a feature/bugfix branch
+* Test whatever you are committing. Ensure this test is a specification
+  of the behavior of the functionality, not just an error case or
+  success case.
 * Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+* Submit a pull request. Squash commits that should be squashed (it is
+  not necessary for you to have just one commit to your pull request,
+  but have each commit be a logical piece of work.)
 
 Copyright
 ---------
 
-Copyright (c) 2012 [Brett Hardin](http://bretthard.in), [Jeremiah Lee](https://github.com/jemiahlee), and [Marcello Missiroli](https://github.com/piffy). See LICENSE.txt for further details.
+Copyright (c) 2014 [Jeremiah Lee](https://github.com/jemiahlee), [Brett Hardin](http://bretthard.in), and [Marcello Missiroli](https://github.com/piffy). See LICENSE.txt for further details.
 

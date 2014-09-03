@@ -11,13 +11,13 @@ require 'rspec/core/rake_task'
 task default: :spec
 
 Jeweler::Tasks.new do |gem|
-  gem.name = 'bgg-api'
-  gem.homepage = 'http://github.com/bhardin/bgg-api'
+  gem.name = 'bgg'
+  gem.homepage = 'http://github.com/jemiahlee/bgg'
   gem.license = 'MIT'
-  gem.summary = 'boardgamegeek api gem'
-  gem.description = 'A gem to interact with the BGG API'
-  gem.email = 'hardin.brett@gmail.com'
-  gem.authors = ['Brett Hardin']
+  gem.summary = 'object-oriented boardgamegeek api gem'
+  gem.description = 'Object-oriented interface for interacting with Boardgamegeek API'
+  gem.email = 'jeremiah.lee@gmail.com'
+  gem.authors = ['Jeremiah Lee', 'Brett Hardin']
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -32,7 +32,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "bgg-api #{version}"
+  rdoc.title = "bgg #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
