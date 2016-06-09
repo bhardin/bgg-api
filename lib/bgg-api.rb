@@ -117,7 +117,7 @@ class BggApi
         xml_data = response.body
         XmlSimple.xml_in(xml_data)
       else
-        raise "Received a #{response.code} at #{url} with #{params}"
+        raise Exception.new("Received a #{response.code} at #{url} with #{params}")
       end
     end
   end
